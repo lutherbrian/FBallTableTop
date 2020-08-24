@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonSounds : MonoBehaviour
+public class ButtonSounds : MonoBehaviour 
 {
 
     public AudioClip sound;
@@ -19,6 +19,8 @@ public class ButtonSounds : MonoBehaviour
         source.playOnAwake = false;
 
         button.onClick.AddListener(() => playsound());
+
+      
     }
 
     // Update is called once per frame
@@ -32,4 +34,6 @@ public class ButtonSounds : MonoBehaviour
 
         source.PlayOneShot(sound);
     }
+
+    
 }
