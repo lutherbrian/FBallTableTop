@@ -21,10 +21,12 @@ public class ScrollText : MonoBehaviour
     void Awake()
     {
         m_textRectTransform = TextMEshProComponenet.GetComponent<RectTransform>();
+
         m_cloneTextObject = Instantiate(TextMEshProComponenet) as TextMeshProUGUI;
-        RectTransform clonerectTransform = m_cloneTextObject.GetComponent<RectTransform>();
-        clonerectTransform.SetParent(m_textRectTransform);
-        clonerectTransform.localScale = new Vector3(1, 1, 1);
+       RectTransform clonerectTransform = m_cloneTextObject.GetComponent<RectTransform>();
+       clonerectTransform.SetParent(m_textRectTransform);
+       clonerectTransform.anchorMin = new Vector2(0, 0.5f);
+       clonerectTransform.localScale = new Vector3(1, 1, 1);
     }
 
     // Update is called once per frame
@@ -36,7 +38,7 @@ public class ScrollText : MonoBehaviour
     IEnumerator Start()
     {
         float width = TextMEshProComponenet.preferredWidth;
-        Vector3 startPosition = m_textRectTransform.position;
+        Vector3 startPosition = m_textRectTransform.localPosition;
 
         float scrollPosition = 0;
 
@@ -46,9 +48,10 @@ public class ScrollText : MonoBehaviour
             {
                 width = TextMEshProComponenet.preferredWidth;
                 m_cloneTextObject.text = TextMEshProComponenet.text;
+                
             }
             
-            m_textRectTransform.position = new Vector3(-scrollPosition % width, startPosition.y, startPosition.z);
+            m_textRectTransform.localPosition = new Vector3(-scrollPosition % width, 0, 0);
 
             scrollPosition += ScrollSpeed * 20 * Time.deltaTime;
 

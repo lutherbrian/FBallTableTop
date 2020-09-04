@@ -7,6 +7,8 @@ public class ButtonSounds : MonoBehaviour
 {
 
     public AudioClip sound;
+    public AudioClip Hoversound;
+
 
     private Button button { get { return GetComponent<Button>(); } }
 
@@ -15,10 +17,12 @@ public class ButtonSounds : MonoBehaviour
     void Start()
     {
         gameObject.AddComponent<AudioSource>();
+
         source.clip = sound;
+
         source.playOnAwake = false;
 
-        button.onClick.AddListener(() => playsound());
+        button.onClick.AddListener(() => playClicksound());
 
       
     }
@@ -29,11 +33,18 @@ public class ButtonSounds : MonoBehaviour
         
     }
 
-    void playsound()
+    public void playClicksound()
     {
-
+        source.clip = sound;
         source.PlayOneShot(sound);
     }
 
-    
+    public void playHoversound()
+    {
+        source.clip = Hoversound;
+        source.PlayOneShot(sound);
+
+    }
+
+
 }
