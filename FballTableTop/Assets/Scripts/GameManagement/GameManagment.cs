@@ -13,12 +13,29 @@ public class GameManagment : MonoBehaviour
     public string player3Name;
     public string player4Name;
     public string player5Name;
+    public string player6Name;
 
     public string player1Team;
     public string player2Team;
     public string player3Team;
     public string player4Team;
     public string player5Team;
+    public string player6Team;
+
+    public int player1Atk;
+    public int player2Atk;
+    public int player3Atk;
+    public int player4Atk;
+    public int player5Atk;
+    public int player6Atk;
+
+    public int player1Def;
+    public int player2Def;
+    public int player3Def;
+    public int player4Def;
+    public int player5Def;
+    public int player6Def;
+
     // Start is called before the first frame update
     void Start()
     {
