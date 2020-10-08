@@ -17,7 +17,7 @@ public class ChangetitleNames : MonoBehaviour
         Gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagment>();
 
 
-        PlayerNum = 1;
+        PlayerNum = 2;
     }
 
     // Update is called once per frame
