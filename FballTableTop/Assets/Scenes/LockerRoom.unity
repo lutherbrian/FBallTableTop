@@ -724,6 +724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d208d469ca8425780ddd0ef33700f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contentpanel: {fileID: 74614212}
+  Leaguestrip: {fileID: 3732625928898296559, guid: ae9b41e2819cc904081b8b2294c0e7e0,
+    type: 3}
 --- !u!1 &82077217
 GameObject:
   m_ObjectHideFlags: 0
@@ -29762,56 +29765,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_text
-      value: "3<pos=13%>3<pos=26%>0<pos=39%>0\t<pos=54%>6<pos=68%>1<pos=80%>5<pos=94%>9"
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 513
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3732625929982963160, guid: ae9b41e2819cc904081b8b2294c0e7e0,
-        type: 3}
-      propertyPath: m_fontSizeMax
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae9b41e2819cc904081b8b2294c0e7e0, type: 3}

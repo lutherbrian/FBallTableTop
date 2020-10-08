@@ -81,7 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3732625928898296558}
   m_Layer: 8
-  m_Name: 1
+  m_Name: League Slots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -481,7 +481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "3\t3\t0\t0\t6\t1\t5\t9"
+  m_text: "3<pos=13%>3<pos=26%>0<pos=39%>0\t<pos=54%>6<pos=68%>1<pos=80%>5<pos=94%>9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -509,14 +509,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 21.4
+  m_fontSize: 25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 25
   m_fontStyle: 0
-  m_textAlignment: 544
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -550,10 +550,10 @@ MonoBehaviour:
   m_margin: {x: 400, y: 0, z: 20, w: 0}
   m_textInfo:
     textComponent: {fileID: 3732625929982963160}
-    characterCount: 15
+    characterCount: 9
     spriteCount: 0
-    spaceCount: 7
-    wordCount: 8
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
