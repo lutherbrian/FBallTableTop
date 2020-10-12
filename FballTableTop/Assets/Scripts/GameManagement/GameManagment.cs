@@ -5,6 +5,21 @@ using UnityEngine.UI;
 
 public class GameManagment : MonoBehaviour
 {
+    
+    public struct Player1
+    {
+
+        public string   playerName1;
+        public string   playerTeam1;
+        public int      playerAtk1;
+        public int      playerDef1;
+        public int      Pts1;
+        public int      Gf1;
+        public int      Ga1;
+        public int      GD;
+
+
+    }
 
     public int numberOfPlayers;
 
@@ -39,7 +54,7 @@ public class GameManagment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+       
     }
 
     // Update is called once per frame
@@ -52,5 +67,8 @@ public class GameManagment : MonoBehaviour
 
     {
         numberOfPlayers = x;
+
+        
+      
     }
 }
