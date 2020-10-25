@@ -12,7 +12,8 @@ public class ChooseYourTeam : MonoBehaviour
     public TMP_InputField inputfield;
     
     private GameManagment gamemanagementScript;
-    private int PlayerNUM = 1;
+    private int PlayerNUM = 0;
+    private GameObject Team;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,51 +29,15 @@ public class ChooseYourTeam : MonoBehaviour
 
     public void AddPlayer()
     {
-        switch (PlayerNUM)
+        
+                Team = GameObject.Find("Team"+PlayerNUM);
+                Team.GetComponent<Team>().playerName = inputfield.text;
+                Team.GetComponent<Team>().TeamName = dropdown.options[dropdown.value].text;
+       // Team.gameObject.name = (inputfield.text + "'s Team");
+                inputfield.text = "";
 
-        {
-         
-        case 5:
-                gamemanagementScript.player5Name = inputfield.text;
-                gamemanagementScript.player5Team = dropdown.options[dropdown.value].text;
-                inputfield.text= "";
-                dropdown.options.RemoveAt(0);
-                dropdown.options.RemoveAll(c => c.text.Contains(gamemanagementScript.player5Team.ToString()));
                 PlayerNUM++;
-            break;
-        case 4:
-                gamemanagementScript.player4Name = inputfield.text;
-                gamemanagementScript.player4Team = dropdown.options[dropdown.value].text;
-                inputfield.text = "";
-                dropdown.options.RemoveAll(c => c.text.Contains(gamemanagementScript.player4Team.ToString()));
-                PlayerNUM++;
-                break;
-        case 3:
-                gamemanagementScript.player3Name = inputfield.text;
-                gamemanagementScript.player3Team = dropdown.options[dropdown.value].text;
-                inputfield.text= "";
-                dropdown.options.RemoveAll(c => c.text.Contains(gamemanagementScript.player3Team.ToString()));
-                PlayerNUM++;
-                break;
-        case 2:
-                gamemanagementScript.player2Name = inputfield.text;
-                gamemanagementScript.player2Team = dropdown.options[dropdown.value].text;
-                inputfield.text = "";
-                dropdown.options.RemoveAll(c => c.text.Contains(gamemanagementScript.player2Team.ToString()));
-                PlayerNUM++;
-                break;
-        case 1:
-                gamemanagementScript.player1Name = inputfield.text;
-                gamemanagementScript.player1Team = dropdown.options[dropdown.value].text;
-                inputfield.text = "";
-                dropdown.options.RemoveAt(dropdown.value);
-                
-                PlayerNUM++;
-                break;
-            default:
-            print("Incorrect intelligence level.");
-            break;
-        }
+             
 
 
     }

@@ -5,11 +5,12 @@ using TMPro;
 
 public class ChangetitleNames : MonoBehaviour
 {
-    private int PlayerNum;
+    public int PlayerNum;
 
     public TextMeshProUGUI playerinfo;
    
     private GameManagment Gamemanager;
+    private GameObject Team;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +18,7 @@ public class ChangetitleNames : MonoBehaviour
         Gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagment>();
 
 
-        PlayerNum = 2;
+        PlayerNum = 0;
     }
 
     // Update is called once per frame
@@ -29,42 +30,28 @@ public class ChangetitleNames : MonoBehaviour
 
     public void ChangeTitle()
     {
-        switch (PlayerNum)
 
+
+      
+
+
+        if (PlayerNum != Gamemanager.numberOfPlayers)
         {
+            Team = GameObject.Find("Team"+PlayerNum);
+            playerinfo.text = Team.GetComponent<Team>().playerName + " - " + Team.GetComponent<Team>().TeamName;
 
-            case 5:
-                playerinfo.text = Gamemanager.player5Team + " - " + Gamemanager.player5Name;
-                PlayerNum++;
-                break;
-            case 4:
-                playerinfo.text = Gamemanager.player4Team + " - " + Gamemanager.player4Name;
-                PlayerNum++;
-                break;
-            case 3:
-                playerinfo.text = Gamemanager.player3Team + " - " + Gamemanager.player3Name;
-                PlayerNum++;
-                break;
-            case 2:
-                playerinfo.text = Gamemanager.player2Team + " - " + Gamemanager.player2Name;
-                PlayerNum++;
-                break;
-            case 1:
-                playerinfo.text = Gamemanager.player1Team + " - " + Gamemanager.player1Name;
-                PlayerNum++;
-                break;
-            default:
-                print("Incorrect intelligence level.");
-                break;
+          
+
+            PlayerNum++;
         }
 
+        else
+        {
+
+            PlayerNum = 0;
+        }
 
     }
 
-    public void Setonce()
-    {
-
-        playerinfo.text = Gamemanager.player1Team + " - " + Gamemanager.player1Name;
-        
-    }
+    
 }

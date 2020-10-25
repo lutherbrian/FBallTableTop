@@ -5,23 +5,13 @@ using UnityEngine.UI;
 
 public class GameManagment : MonoBehaviour
 {
-    
-    public struct Player1
-    {
-
-        public string   playerName1;
-        public string   playerTeam1;
-        public int      playerAtk1;
-        public int      playerDef1;
-        public int      Pts1;
-        public int      Gf1;
-        public int      Ga1;
-        public int      GD;
 
 
-    }
 
+
+    public GameObject TeamPrefab;
     public int numberOfPlayers;
+    public int numberOfTeams = 9;
 
     public string player1Name;
     public string player2Name;
@@ -54,7 +44,12 @@ public class GameManagment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        for (int i = 0; i < numberOfTeams; i++)
+        {
+            GameObject newgameObject = (GameObject)Instantiate(TeamPrefab);
+            newgameObject.name = "Team" + i;
+
+        }
     }
 
     // Update is called once per frame
@@ -70,5 +65,19 @@ public class GameManagment : MonoBehaviour
 
         
       
+    }
+
+    public void AddTeams()
+
+    {
+        for (int i = 0; i < numberOfPlayers; i++)
+        {
+            GameObject newgameObject = (GameObject)Instantiate(TeamPrefab);
+        
+
+            newgameObject.name = "Team" + i;
+            
+        }
+
     }
 }
