@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MovePanelScript : MonoBehaviour
 {
@@ -16,23 +17,24 @@ public class MovePanelScript : MonoBehaviour
 
     public bool multipleplayerPanel = false;
     public GameObject gameManagement;
+    public Dropdown dropdown;
     private int panelAnimations;
 
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
         PanelOut = this.gameObject;
         EndPositionPIN = new Vector3(0.0f, 0.0f, 0.0f);
         gameManagement = GameObject.FindGameObjectWithTag("GameManager");
-        panelAnimations = 0;
+        panelAnimations = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
@@ -41,7 +43,7 @@ public class MovePanelScript : MonoBehaviour
     public void MovePanelOut()
     {
 
-        if (multipleplayerPanel == true && panelAnimations!= gameManagement.GetComponent<GameManagment>().numberOfPlayers)
+        if (multipleplayerPanel == true && panelAnimations != gameManagement.GetComponent<GameManagment>().numberOfPlayers)
         {
             PanelOut.LeanMoveLocal(EndPositionPOUT.transform.position, speed).setEaseInOutBack();
             StartCoroutine(BringBackPanel(PanelInDelay));
@@ -52,7 +54,7 @@ public class MovePanelScript : MonoBehaviour
             panelAnimations = 0;
             StartCoroutine(AnimatePanelIn(PanelInDelay));
         }
-        
+
     }
 
 
@@ -60,7 +62,7 @@ public class MovePanelScript : MonoBehaviour
 
 
     IEnumerator AnimatePanelIn(float Time)
-    
+
     {
         yield return new WaitForSeconds(Time);
 
@@ -81,4 +83,6 @@ public class MovePanelScript : MonoBehaviour
 
         PanelOut.LeanMoveLocal(EndPositionPIN, speed).setEaseInOutBack();
     }
+
+    
 }
