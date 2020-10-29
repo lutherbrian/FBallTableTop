@@ -2,9 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MoveShirts : MonoBehaviour
 {
+
+
+    public GameObject Team;
+    private GameObject gamemanager;
+    public int PlayerNum = 0;
+    public int FormationNumber;
+    public GameObject AttackPanel;
+    public GameObject DefensePanel;
+    public int TeamAttack;
+    public int TeamDefense;
+
+    public GameObject button1;
+    public GameObject button2;
+    public GameObject button3;
+    public GameObject button4;
+    public GameObject button5;
+    public GameObject button6;
+    public GameObject button7;
+
+
     [Header("Shirts")]
 
     public GameObject GKShirt;
@@ -114,23 +135,137 @@ public class MoveShirts : MonoBehaviour
 
     public float speed = .1f;
 
-
-    // Start is called before the first frame update
-   
-  
-   public void Move442()
+    private void Start()
     {
-        LeanTween.move(P10Shirt, SP10.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P9Shirt, SP9.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P8Shirt, SP8.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P7Shirt, SP7.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P6Shirt, SP6.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P5Shirt, SP5.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P4Shirt, SP4.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P3Shirt, SP3.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P2Shirt, SP2.transform.position, speed).setEaseInOutQuart();
-        LeanTween.move(P1Shirt, SP1.transform.position, speed).setEaseInOutQuart();
+        GetTeamData();
     }
+
+    public void ChangeFormationfromTeams(int formation)
+
+    {
+        switch (formation)
+        {
+            case 7:
+                Move532();
+                button7.GetComponent<Button>().Select();
+                break;
+            case 6:
+                Move434();
+                button6.GetComponent<Button>().Select();
+                break;
+            case 5:
+                Move352();
+                button5.GetComponent<Button>().Select();
+                break;
+            case 4:
+                Move424();
+                button4.GetComponent<Button>().Select();
+                break;
+            case 3:
+                Move451();
+                button3.GetComponent<Button>().Select();
+                break;
+            case 2:
+                Move433();
+                button2.GetComponent<Button>().Select();
+                break;
+            case 1:
+                Move442();
+                button1.GetComponent<Button>().Select();
+                break;
+            default:
+                print("Incorrect intelligence level.");
+                break;
+        }
+
+    }
+
+    public void AddAtkDef()
+
+    {
+
+        TeamAttack = int.Parse(AttackPanel.GetComponent<TMP_InputField>().text);
+        TeamDefense = int.Parse(DefensePanel.GetComponent<TMP_InputField>().text);
+
+    }
+
+    public void UpdateTeam()
+
+    {
+
+        gamemanager = GameObject.FindGameObjectWithTag("GameManager");
+        Team = GameObject.Find("Team" + PlayerNum);
+       
+        if (Team.GetComponent<Team>().playerAtk != TeamAttack || Team.GetComponent<Team>().playerDef!= TeamAttack || Team.GetComponent<Team>().Formation != FormationNumber)
+        {
+            Team.GetComponent<Team>().FormationChanged = true;
+
+        }
+
+
+        Team.GetComponent<Team>().Formation = FormationNumber;
+        Team.GetComponent<Team>().playerAtk = TeamAttack;
+        Team.GetComponent<Team>().playerDef = TeamDefense;
+        PlayerNum++;
+        StartCoroutine(DelayedMove(2f));
+
+        if (PlayerNum == gamemanager.GetComponent<GameManagment>().numberOfPlayers)
+        {
+
+            PlayerNum = 0;
+        }
+
+
+    }
+
+    public void GetTeamData()
+
+    {
+        Team = GameObject.Find("Team" + PlayerNum);
+
+        TeamDefense = Team.GetComponent<Team>().playerDef;
+        TeamAttack = Team.GetComponent<Team>().playerAtk;
+        FormationNumber = Team.GetComponent<Team>().Formation;
+        AttackPanel.GetComponent<TMP_InputField>().text = TeamAttack.ToString();
+        DefensePanel.GetComponent<TMP_InputField>().text = TeamDefense.ToString();
+        
+
+        
+
+
+
+    }
+
+    IEnumerator DelayedMove(float time)
+    {
+        yield return new WaitForSeconds(time);
+        
+        ChangeFormationfromTeams(FormationNumber);
+        GetTeamData();
+        Debug.Log("Working");
+        yield return null;
+        
+    }
+
+
+// Start is called before the first frame update
+
+
+    public void Move442()
+{
+    LeanTween.move(P10Shirt, SP10.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P9Shirt, SP9.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P8Shirt, SP8.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P7Shirt, SP7.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P6Shirt, SP6.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P5Shirt, SP5.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P4Shirt, SP4.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P3Shirt, SP3.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P2Shirt, SP2.transform.position, speed).setEaseInOutQuart();
+    LeanTween.move(P1Shirt, SP1.transform.position, speed).setEaseInOutQuart();
+   
+    FormationNumber = 1;
+}
 
     public void Move433()
     {
@@ -144,6 +279,7 @@ public class MoveShirts : MonoBehaviour
         LeanTween.move(P3Shirt, SP3433.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P2Shirt, SP2433.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P1Shirt, SP1433.transform.position, speed).setEaseInOutQuart();
+        FormationNumber = 2;
     }
 
     public void Move451()
@@ -158,6 +294,7 @@ public class MoveShirts : MonoBehaviour
         LeanTween.move(P3Shirt, SP3451.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P2Shirt, SP2451.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P1Shirt, SP1451.transform.position, speed).setEaseInOutQuart();
+        FormationNumber = 3;
     }
 
     public void Move424()
@@ -172,6 +309,7 @@ public class MoveShirts : MonoBehaviour
         LeanTween.move(P3Shirt, SP3424.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P2Shirt, SP2424.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P1Shirt, SP1424.transform.position, speed).setEaseInOutQuart();
+        FormationNumber = 4;
     }
 
     public void Move352()
@@ -186,6 +324,7 @@ public class MoveShirts : MonoBehaviour
         LeanTween.move(P3Shirt, SP3352.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P2Shirt, SP2352.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P1Shirt, SP1352.transform.position, speed).setEaseInOutQuart();
+        FormationNumber = 5;
     }
 
     public void Move434()
@@ -200,6 +339,7 @@ public class MoveShirts : MonoBehaviour
         LeanTween.move(P3Shirt, SP3434.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P2Shirt, SP2434.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P1Shirt, SP1434.transform.position, speed).setEaseInOutQuart();
+        FormationNumber = 6;
     }
 
 
@@ -215,5 +355,6 @@ public class MoveShirts : MonoBehaviour
         LeanTween.move(P3Shirt, SP3532.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P2Shirt, SP2532.transform.position, speed).setEaseInOutQuart();
         LeanTween.move(P1Shirt, SP1532.transform.position, speed).setEaseInOutQuart();
+        FormationNumber = 7;
     }
 }

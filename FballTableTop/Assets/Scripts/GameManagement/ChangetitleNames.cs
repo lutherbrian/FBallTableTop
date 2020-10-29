@@ -19,6 +19,8 @@ public class ChangetitleNames : MonoBehaviour
 
 
         PlayerNum = 0;
+        ChangeTitle();
+        
     }
 
     // Update is called once per frame
@@ -49,6 +51,12 @@ public class ChangetitleNames : MonoBehaviour
         {
 
             PlayerNum = 0;
+            Team = GameObject.Find("Team" + PlayerNum);
+            playerinfo.text = Team.GetComponent<Team>().playerName + " - " + Team.GetComponent<Team>().TeamName;
+
+
+
+            PlayerNum++;
         }
 
     }

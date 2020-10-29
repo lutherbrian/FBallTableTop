@@ -16,9 +16,11 @@ public class Team : MonoBehaviour
     [SerializeField] public int Gf = 0;
     [SerializeField] public int Ga = 0;
     [SerializeField] public int GD = 0;
-    
+    [SerializeField] public bool FormationChanged = false;
+    [SerializeField] public int Formation = 3;
 
-    
+
+
     // Start is called before the first frame update
     void Start()
     {

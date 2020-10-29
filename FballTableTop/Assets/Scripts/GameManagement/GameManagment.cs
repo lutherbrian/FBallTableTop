@@ -80,4 +80,12 @@ public class GameManagment : MonoBehaviour
         }
 
     }
+
+    public void AddPlayerFormations()
+
+    {
+
+
+
+    }
 }

@@ -44,10 +44,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
-  playerTeam: 
-  playerAtk: 0
-  playerDef: 0
+  TeamName: 
+  playerAtk: 12
+  playerDef: 15
   Pts: 0
   Gf: 0
-  Ga: 0
-  GD: 0
+  Ga: 10
+  GD: 10
+  FormationChanged: 0
+  Formation: 3
