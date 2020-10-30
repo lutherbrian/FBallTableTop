@@ -201,6 +201,11 @@ public class MoveShirts : MonoBehaviour
             Team.GetComponent<Team>().FormationChanged = true;
 
         }
+        else
+        {
+
+            Team.GetComponent<Team>().FormationChanged = false;
+        }
 
 
         Team.GetComponent<Team>().Formation = FormationNumber;
@@ -228,7 +233,7 @@ public class MoveShirts : MonoBehaviour
         FormationNumber = Team.GetComponent<Team>().Formation;
         AttackPanel.GetComponent<TMP_InputField>().text = TeamAttack.ToString();
         DefensePanel.GetComponent<TMP_InputField>().text = TeamDefense.ToString();
-        
+        Debug.Log("help");
 
         
 
@@ -239,9 +244,9 @@ public class MoveShirts : MonoBehaviour
     IEnumerator DelayedMove(float time)
     {
         yield return new WaitForSeconds(time);
-        
-        ChangeFormationfromTeams(FormationNumber);
         GetTeamData();
+        ChangeFormationfromTeams(FormationNumber);
+        
         Debug.Log("Working");
         yield return null;
         
