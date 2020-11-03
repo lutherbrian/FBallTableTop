@@ -20,6 +20,13 @@ public class MovePanelScript : MonoBehaviour
     public Dropdown dropdown;
     private int panelAnimations;
 
+    public GameObject Move1;
+    public GameObject Move2;
+    public GameObject Move3;
+    public GameObject Move4;
+    public GameObject Move5;
+
+
 
 
     // Start is called before the first frame update
@@ -45,11 +52,15 @@ public class MovePanelScript : MonoBehaviour
 
         if (multipleplayerPanel == true && panelAnimations != gameManagement.GetComponent<GameManagment>().numberOfPlayers)
         {
+            
             PanelOut.LeanMoveLocal(EndPositionPOUT.transform.position, speed).setEaseInOutBack();
             StartCoroutine(BringBackPanel(PanelInDelay));
             panelAnimations++;
         }
         else {
+
+          
+            
             PanelOut.LeanMoveLocal(EndPositionPOUT.transform.position, speed).setEaseInOutBack();
             panelAnimations = 0;
             StartCoroutine(AnimatePanelIn(PanelInDelay));

@@ -610,6 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3732625928898296558}
+  - component: {fileID: 4105194026900265642}
   m_Layer: 8
   m_Name: League Slots new
   m_TagString: Untagged
@@ -637,6 +638,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 41.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4105194026900265642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3732625928898296559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34ddf1277e0f348d69f310a9fdc86892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamText: {fileID: 3732625929577767048}
+  played: {fileID: 3732625929982963162}
+  won: {fileID: 3755015923629433416}
+  Lost: {fileID: 3609238742179555352}
+  drawn: {fileID: 2229285530227849589}
+  goalsFor: {fileID: 6007806155753436391}
+  goalsAgainst: {fileID: 6723459570709891206}
+  goalDif: {fileID: 6356987848193190726}
+  points: {fileID: 6975264528882287765}
 --- !u!1 &3732625929577767048
 GameObject:
   m_ObjectHideFlags: 0
