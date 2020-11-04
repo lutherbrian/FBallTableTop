@@ -1084,8 +1084,10 @@ MonoBehaviour:
   panelIn: {fileID: 0}
   StartPosition: {fileID: 0}
   multipleplayerPanel: 0
+  spawn: 1
   gameManagement: {fileID: 0}
-  PanelToOpen: {fileID: 0}
+  PanelToOpen: {fileID: 6450516573216207545, guid: 35092c24ace004a3da4bd872e65a5106,
+    type: 3}
   maincanvas: {fileID: 0}
 --- !u!114 &7062007982170014616
 MonoBehaviour:

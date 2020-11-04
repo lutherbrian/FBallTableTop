@@ -8,7 +8,8 @@ using TMPro;
 public class ChooseYourTeam : MonoBehaviour
 {
 
-    public GameObject gameManagment;
+    public GameObject gameManger;
+    public GameManagment gamemanagementScript;
     public TMP_Dropdown dropdown;
     public TMP_InputField inputfield;
     private int numberofPlayers;
@@ -27,13 +28,22 @@ public class ChooseYourTeam : MonoBehaviour
     public TMP_InputField Team12;
     public TMP_InputField Team13;
 
-    private GameManagment gamemanagementScript;
+   
     private int PlayerNUM = 0;
     private GameObject Team;
     // Start is called before the first frame update
+
+
     void Start()
     {
-        numberofPlayers = gameManagment.GetComponent<GameManagment>().numberOfPlayers;
+
+        gamemanagementScript = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagment>();
+        gameManger = GameObject.FindGameObjectWithTag("GameManager");
+
+
+        addDropOptions();
+        
+        numberofPlayers = gamemanagementScript.numberOfPlayers;
         List<string> m_DropOptions = new List<string> { Team1.text, Team2.text, Team3.text, Team4.text, Team5.text, Team6.text, Team7.text, Team8.text, Team9.text, Team10.text, Team11.text, Team12.text, Team13.text };
         dropdown.ClearOptions();
         dropdown.AddOptions(m_DropOptions);
@@ -43,12 +53,26 @@ public class ChooseYourTeam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+        
     }
 
     public void addDropOptions()
 
     {
+        Team1 = gamemanagementScript.Team1;
+        Team2 = gamemanagementScript.Team2;
+        Team3 = gamemanagementScript.Team3;
+        Team4 = gamemanagementScript.Team4;
+        Team5 = gamemanagementScript.Team5;
+        Team6 = gamemanagementScript.Team6;
+        Team7 = gamemanagementScript.Team7;
+        Team8 = gamemanagementScript.Team8;
+        Team9 = gamemanagementScript.Team9;
+        Team10 = gamemanagementScript.Team10;
+        Team11 = gamemanagementScript.Team11;
+        Team12 = gamemanagementScript.Team12;
+        Team13 = gamemanagementScript.Team13;
+
         List<string> m_DropOptions = new List<string> { Team1.text, Team2.text, Team3.text, Team4.text, Team5.text, Team6.text, Team7.text, Team8.text, Team9.text, Team10.text, Team11.text, Team12.text, Team13.text };
         dropdown.ClearOptions();
         dropdown.AddOptions(m_DropOptions);

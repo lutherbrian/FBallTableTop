@@ -45,31 +45,31 @@ public class RandomImage : MonoBehaviour
             case 0:
                 background.CrossFadeColor(new Color(1, 1, 1, 1), time, true, true);
                 background.texture = image1;
-                Debug.Log("ok");
+                
                 break;
 
             case 1:
                 background.CrossFadeColor(new Color(1, 1, 1, 1), time, true, true);
                 background.texture = image2;
-                Debug.Log("ok");
+                
                 break;
 
             case 2:
                 background.CrossFadeColor(new Color(1, 1, 1, 1), time, true, true);
                 background.texture = image3;
-                Debug.Log("ok");
+                
                 break;
 
             case 3:
                 background.CrossFadeColor(new Color(1, 1, 1, 1), time, true, true);
                 background.texture = image4;
-                Debug.Log("ok");
+                
                 break;
 
             case 4:
                 background.CrossFadeColor(new Color(1, 1, 1, 1), time, true, true);
                 background.texture = image5;
-                Debug.Log("ok");
+                
                 break;
 
 

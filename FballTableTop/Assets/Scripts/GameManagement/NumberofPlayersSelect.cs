@@ -14,10 +14,12 @@ public class NumberofPlayersSelect : MonoBehaviour
 
     public int numberOfPlayersSelected;
 
-    public GameObject gameManagment;
+    public GameManagment gameManagment;
     // Start is called before the first frame update
     void Start()
     {
+
+        gameManagment = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagment>();
         player1.onClick.AddListener(() => playerselected(1));
         player2.onClick.AddListener(() => playerselected(2));
         player3.onClick.AddListener(() => playerselected(3));
