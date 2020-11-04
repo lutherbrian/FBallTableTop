@@ -137,8 +137,12 @@ public class MoveShirts : MonoBehaviour
 
     private void Start()
     {
-        GetTeamData();
+        
+        StartCoroutine(DelayedMove(2));
     }
+
+
+    
 
     public void ChangeFormationfromTeams(int formation)
 
@@ -195,7 +199,7 @@ public class MoveShirts : MonoBehaviour
 
         gamemanager = GameObject.FindGameObjectWithTag("GameManager");
         Team = GameObject.Find("Team" + PlayerNum);
-       
+       //check to see if the formation has been changed
         if (Team.GetComponent<Team>().playerAtk != TeamAttack || Team.GetComponent<Team>().playerDef!= TeamAttack || Team.GetComponent<Team>().Formation != FormationNumber)
         {
             Team.GetComponent<Team>().FormationChanged = true;
@@ -207,22 +211,27 @@ public class MoveShirts : MonoBehaviour
             Team.GetComponent<Team>().FormationChanged = false;
         }
 
-
+        // update variables from team object
         Team.GetComponent<Team>().Formation = FormationNumber;
         Team.GetComponent<Team>().playerAtk = TeamAttack;
         Team.GetComponent<Team>().playerDef = TeamDefense;
-        PlayerNum++;
-        StartCoroutine(DelayedMove(2f));
-
-        if (PlayerNum == gamemanager.GetComponent<GameManagment>().numberOfPlayers)
+        
+        //check to see if we have exceeded or equaled the number of human players
+        if (PlayerNum == gamemanager.GetComponent<GameManagment>().numberOfPlayers || PlayerNum > gamemanager.GetComponent<GameManagment>().numberOfPlayers)
         {
 
             PlayerNum = 0;
         }
+        else
+        {
+
+            PlayerNum++;
+            StartCoroutine(DelayedMove(2f));
+        }
 
 
     }
-
+    //get team data from team object
     public void GetTeamData()
 
     {
@@ -233,29 +242,29 @@ public class MoveShirts : MonoBehaviour
         FormationNumber = Team.GetComponent<Team>().Formation;
         AttackPanel.GetComponent<TMP_InputField>().text = TeamAttack.ToString();
         DefensePanel.GetComponent<TMP_InputField>().text = TeamDefense.ToString();
-        Debug.Log("help");
+       
 
         
 
 
 
     }
-
+    //delay the shirt movment
     IEnumerator DelayedMove(float time)
     {
         yield return new WaitForSeconds(time);
         GetTeamData();
         ChangeFormationfromTeams(FormationNumber);
         
-        Debug.Log("Working");
+        
         yield return null;
         
     }
 
 
-// Start is called before the first frame update
 
 
+    //Move shirt scripts
     public void Move442()
 {
     LeanTween.move(P10Shirt, SP10.transform.position, speed).setEaseInOutQuart();

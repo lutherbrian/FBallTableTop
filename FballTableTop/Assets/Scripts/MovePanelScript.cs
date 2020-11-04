@@ -17,14 +17,12 @@ public class MovePanelScript : MonoBehaviour
 
     public bool multipleplayerPanel = false;
     public GameObject gameManagement;
-    public Dropdown dropdown;
+    
     private int panelAnimations;
 
-    public GameObject Move1;
-    public GameObject Move2;
-    public GameObject Move3;
-    public GameObject Move4;
-    public GameObject Move5;
+    public GameObject PanelToOpen;
+    public GameObject maincanvas;
+    private Vector3 OpenPosition;
 
 
 
@@ -36,6 +34,12 @@ public class MovePanelScript : MonoBehaviour
         EndPositionPIN = new Vector3(0.0f, 0.0f, 0.0f);
         gameManagement = GameObject.FindGameObjectWithTag("GameManager");
         panelAnimations = 1;
+
+
+
+       // maincanvas = GameObject.FindGameObjectWithTag("MainCanvas");
+       // OpenPosition = new Vector3(-3000, 0, 0);
+       // LeanTween.moveLocal(this.gameObject, new Vector3(0, 0, 0), 2f).setEaseInOutBack();
     }
 
     // Update is called once per frame
@@ -100,5 +104,18 @@ public class MovePanelScript : MonoBehaviour
         PanelOut.LeanMoveLocal(EndPositionPIN, speed).setEaseInOutBack();
     }
 
-    
+
+    public void CreatePanel()
+
+    {
+
+       // GameObject newgameObject = (GameObject)Instantiate(PanelToOpen);
+       // newgameObject.transform.localPosition = OpenPosition;
+
+       // newgameObject.transform.SetParent(maincanvas.transform, false);
+
+
+
+    }
+
 }
