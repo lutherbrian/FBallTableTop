@@ -6,15 +6,18 @@ using TMPro;
 public class LeaugueSlotsdata : MonoBehaviour
 {
 
-    public GameObject teamText;
-    public GameObject played;
-    public GameObject won;
-    public GameObject Lost;
-    public GameObject drawn;
-    public GameObject goalsFor;
-    public GameObject goalsAgainst;
-    public GameObject goalDif;
-    public GameObject points;
+    public TextMeshProUGUI teamText;
+    public TextMeshProUGUI played;
+    public TextMeshProUGUI won;
+    public TextMeshProUGUI Lost;
+    public TextMeshProUGUI drawn;
+    public TextMeshProUGUI goalsFor;
+    public TextMeshProUGUI goalsAgainst;
+    public TextMeshProUGUI goalDif;
+    public TextMeshProUGUI points;
+    public TextMeshProUGUI rank;
+
+
 
     // Start is called before the first frame update
     void Start()

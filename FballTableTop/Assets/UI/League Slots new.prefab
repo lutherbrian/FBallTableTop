@@ -650,15 +650,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34ddf1277e0f348d69f310a9fdc86892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamText: {fileID: 3732625929577767048}
-  played: {fileID: 3732625929982963162}
-  won: {fileID: 3755015923629433416}
-  Lost: {fileID: 3609238742179555352}
-  drawn: {fileID: 2229285530227849589}
-  goalsFor: {fileID: 6007806155753436391}
-  goalsAgainst: {fileID: 6723459570709891206}
-  goalDif: {fileID: 6356987848193190726}
-  points: {fileID: 6975264528882287765}
+  teamText: {fileID: 3732625929577767054}
+  played: {fileID: 3732625929982963160}
+  won: {fileID: 7771150156324689652}
+  Lost: {fileID: 8006494892735210716}
+  drawn: {fileID: 3588533135642520661}
+  goalsFor: {fileID: 539761807064807138}
+  goalsAgainst: {fileID: 1728552540259144794}
+  goalDif: {fileID: 7723462539008027045}
+  points: {fileID: 5618008301364670805}
+  rank: {fileID: 3732625929852194902}
 --- !u!1 &3732625929577767048
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,12 +751,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 19.15
+  m_fontSize: 24
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 24
   m_fontStyle: 0
   m_textAlignment: 513
   m_characterSpacing: 0
@@ -788,7 +789,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 5, y: 0, z: 683.7, w: 0}
+  m_margin: {x: 5, y: 0, z: 552.5305, w: 0}
   m_textInfo:
     textComponent: {fileID: 3732625929577767054}
     characterCount: 17

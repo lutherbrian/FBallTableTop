@@ -23,7 +23,7 @@ public class SeetingAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        this.gameObject.transform.SetAsLastSibling();
     }
 
     public void MoveSettingsPanel()

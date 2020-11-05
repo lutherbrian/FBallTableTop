@@ -10,6 +10,8 @@ public class Team : MonoBehaviour
 
     [SerializeField] public string playerName;
     [SerializeField] public string TeamName;
+    [SerializeField] public int played = 5;
+
     [SerializeField] public int playerAtk = 10;
     [SerializeField] public int playerDef = 10;
     [SerializeField] public int Pts = 0;

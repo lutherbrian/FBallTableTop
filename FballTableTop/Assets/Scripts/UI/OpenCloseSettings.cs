@@ -15,7 +15,7 @@ public class OpenCloseSettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        this.gameObject.transform.SetAsLastSibling();
     }
 
 
