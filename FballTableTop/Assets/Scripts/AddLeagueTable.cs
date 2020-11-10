@@ -57,7 +57,7 @@ public class AddLeagueTable : MonoBehaviour
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsFor.text = teamScript.Gf.ToString();
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsAgainst.text = teamScript.Ga.ToString();
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalDif.text = teamScript.GD.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().rank.text = i+1.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().rank.text = i.ToString();
 
 
             
