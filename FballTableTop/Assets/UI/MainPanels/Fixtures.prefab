@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6904195871287144525}
   - component: {fileID: 6904195871287144524}
   m_Layer: 8
-  m_Name: Text (TMP) (1)
+  m_Name: HeaderText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 75.75
+  m_fontSize: 94.5
   m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -676,7 +676,7 @@ GameObject:
   - component: {fileID: 6904195872042030302}
   - component: {fileID: 6904195872042030301}
   - component: {fileID: 6904195872042030300}
-  - component: {fileID: 6904195872042030296}
+  - component: {fileID: 1951711426762829201}
   m_Layer: 8
   m_Name: Content
   m_TagString: Untagged
@@ -782,7 +782,7 @@ MonoBehaviour:
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!114 &6904195872042030296
+--- !u!114 &1951711426762829201
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -791,12 +791,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6904195872042030114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60d208d469ca8425780ddd0ef33700f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 117f2fbf83df2e040ac58a2c45448acf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: {fileID: 0}
   contentpanel: {fileID: 6904195872042030114}
-  Leaguestrip: {fileID: 5089915771811296369, guid: 7276fc61f05c48b46b9e91246afe6bb1,
+  Fixturestrip: {fileID: 5089915771811296369, guid: 7276fc61f05c48b46b9e91246afe6bb1,
     type: 3}
   slotNumber: 15
 --- !u!1 &6904195872274730292
@@ -899,7 +898,7 @@ GameObject:
   - component: {fileID: 6904195872832088801}
   - component: {fileID: 6904195872832088800}
   m_Layer: 8
-  m_Name: TMP SubMeshUI [Minion Pro Regular SDF Material + LiberationSans SDF Atlas]
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

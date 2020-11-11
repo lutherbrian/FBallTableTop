@@ -5,7 +5,7 @@ using UnityEngine;
 public class LeaguePlaceMovement : MonoBehaviour
 {
 
-    float speed = 1f;
+    float speed = .5f;
     AudioSource swoop;
     public float pitch = 1f;
     
@@ -31,7 +31,7 @@ public class LeaguePlaceMovement : MonoBehaviour
     {
         
 
-        LeanTween.moveLocal(this.gameObject, new Vector3(0, 0, 0), speed).setEaseInOutQuart();
+        LeanTween.moveLocal(this.gameObject, new Vector3(0, 0, 0), speed).setEaseOutExpo();
         StartCoroutine(playsound());
     }
 

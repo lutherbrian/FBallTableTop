@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7062007980551647990}
   - component: {fileID: 7062007980551647991}
   m_Layer: 8
-  m_Name: 3 players button
+  m_Name: 4 players button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayerNumber
+      - m_Target: {fileID: 7889372730768902830}
+        m_MethodName: NumberOfPlayers
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 7062007980561464377}
   - component: {fileID: 7062007980561464378}
   m_Layer: 8
-  m_Name: 4 players button
+  m_Name: 5 players button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,8 +327,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayerNumber
+      - m_Target: {fileID: 7889372730768902830}
+        m_MethodName: NumberOfPlayers
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 7062007981295996906}
   - component: {fileID: 7062007981295996907}
   m_Layer: 8
-  m_Name: 1 players button
+  m_Name: 2 players button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,8 +534,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayerNumber
+      - m_Target: {fileID: 7889372730768902830}
+        m_MethodName: NumberOfPlayers
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -637,7 +637,7 @@ GameObject:
   - component: {fileID: 7062007981795911319}
   - component: {fileID: 7062007981795911320}
   m_Layer: 8
-  m_Name: 5 players button
+  m_Name: 6 players button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -741,8 +741,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayerNumber
+      - m_Target: {fileID: 7889372730768902830}
+        m_MethodName: NumberOfPlayers
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -997,6 +997,7 @@ GameObject:
   - component: {fileID: 7062007982170014619}
   - component: {fileID: 7062007982170014617}
   - component: {fileID: 7062007982170014616}
+  - component: {fileID: 7889372730768902830}
   m_Layer: 8
   m_Name: How Many players Panel
   m_TagString: Untagged
@@ -1079,9 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd98dc0130d9838459fa320b756d25cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EndPositionPOUT: {fileID: 0}
   PanelInDelay: 0
-  panelIn: {fileID: 0}
   StartPosition: {fileID: 0}
   multipleplayerPanel: 0
   spawn: 1
@@ -1108,6 +1107,18 @@ MonoBehaviour:
   player5: {fileID: 7062007981795911324}
   numberOfPlayersSelected: 0
   gameManagment: {fileID: 0}
+--- !u!114 &7889372730768902830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007982170014621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40c1b69308fd9d34fbe7f4a294c2f13b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7062007982204786687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,7 +1135,7 @@ GameObject:
   - component: {fileID: 7062007982204786684}
   - component: {fileID: 7062007982204786685}
   m_Layer: 8
-  m_Name: 2 players button
+  m_Name: 3 players button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1228,8 +1239,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: PlayerNumber
+      - m_Target: {fileID: 7889372730768902830}
+        m_MethodName: NumberOfPlayers
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

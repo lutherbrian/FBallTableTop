@@ -6,6 +6,7 @@ public class OpenCloseSettings : MonoBehaviour
 {
 
     private bool open = false;
+    private bool WindowOpen = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,15 +26,17 @@ public class OpenCloseSettings : MonoBehaviour
 
         if (open == false)
         {
-            LeanTween.rotate(this.gameObject, new Vector3(0, 0, -90), .75f).setEaseInOutBack();
+            LeanTween.rotate(this.gameObject, new Vector3(0, 0, -90), .75f).setEaseOutBack();
             open = true;
         }
 
-        else
+        else if(WindowOpen == false)
         {
 
             LeanTween.rotate(this.gameObject, new Vector3(0, 0, 90), .75f).setEaseInBack();
             open = false;
         }
     }
+
+   
 }

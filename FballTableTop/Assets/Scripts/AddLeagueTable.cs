@@ -9,9 +9,6 @@ using System.Linq;
 public class AddLeagueTable : MonoBehaviour
 {
 
-
-    public Transform ammo;
-
     public GameObject contentpanel;
     public GameObject Leaguestrip;
     public int slotNumber;
@@ -40,10 +37,10 @@ public class AddLeagueTable : MonoBehaviour
 
         for (int i = 0; i < slotNumber; i++)
         {
-            
+            Debug.Log("Slots");
             pitch += .2f;
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.3f);
             
             newLeagueStrip = (GameObject)Instantiate(Leaguestrip);
             newLeagueStrip.transform.SetParent(contentpanel.transform, false);
