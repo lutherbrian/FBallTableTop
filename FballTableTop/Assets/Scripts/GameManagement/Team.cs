@@ -26,7 +26,7 @@ public class Team : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Pts = Random.Range(0, 90);
     }
 
     // Update is called once per frame

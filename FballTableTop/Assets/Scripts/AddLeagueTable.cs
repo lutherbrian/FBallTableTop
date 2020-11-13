@@ -13,6 +13,7 @@ public class AddLeagueTable : MonoBehaviour
     public GameObject Leaguestrip;
     public int slotNumber;
     private Vector3 OpenPosition;
+    private int positionNumber = 1;
 
     private GameObject newLeagueStrip;
 
@@ -33,28 +34,39 @@ public class AddLeagueTable : MonoBehaviour
 
    IEnumerator addleaugue()
     {
-      
+
+        GameObject gamemanager = GameObject.Find("GameManager");
+
+        SavingLoading teaminfo = gamemanager.GetComponent<SavingLoading>();
+
+        teaminfo.StartSort();
 
         for (int i = 0; i < slotNumber; i++)
         {
-            Debug.Log("Slots");
+            
             pitch += .2f;
 
             yield return new WaitForSeconds(0.3f);
             
             newLeagueStrip = (GameObject)Instantiate(Leaguestrip);
             newLeagueStrip.transform.SetParent(contentpanel.transform, false);
-            GameObject Teamobject = GameObject.Find("Team" + i);
-            Team teamScript = Teamobject.GetComponent<Team>();
 
             
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().teamText.text = teamScript.TeamName;
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().played.text = teamScript.played.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().points.text = teamScript.Pts.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsFor.text = teamScript.Gf.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsAgainst.text = teamScript.Ga.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalDif.text = teamScript.GD.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().rank.text = i.ToString();
+
+          
+
+            
+
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().teamText.text = teaminfo.teams[i].TeamName;
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().played.text = teaminfo.teams[i].played.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().points.text = teaminfo.teams[i].Pts.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsFor.text = teaminfo.teams[i].Gf.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsAgainst.text = teaminfo.teams[i].Ga.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalDif.text = teaminfo.teams[i].GD.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().rank.text = positionNumber.ToString();
+            positionNumber++;
+
+           
 
 
             

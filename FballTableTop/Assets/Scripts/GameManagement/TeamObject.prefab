@@ -45,9 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: 
   TeamName: 
+  played: 5
   playerAtk: 12
   playerDef: 15
-  Pts: 0
+  Pts: 22
   Gf: 0
   Ga: 10
   GD: 10
