@@ -6365,6 +6365,7 @@ GameObject:
   - component: {fileID: 3628220597120611772}
   - component: {fileID: 5706192942009034110}
   - component: {fileID: 5706192942009034109}
+  - component: {fileID: 6678868336843009754}
   m_Layer: 8
   m_Name: FormationPanel
   m_TagString: Untagged
@@ -6466,6 +6467,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerNum: 0
   playerinfo: {fileID: 336316927576687022}
+--- !u!114 &6678868336843009754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706192942009034111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5794356307216968878
 GameObject:
   m_ObjectHideFlags: 0

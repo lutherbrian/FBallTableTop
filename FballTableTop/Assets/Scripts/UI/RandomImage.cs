@@ -39,7 +39,7 @@ public class RandomImage : MonoBehaviour
 
     {
         int i = (int)obj;
-       Debug.Log("int"+i);
+       
 
         //int random = Random.Range(0, 4);
         switch (i)

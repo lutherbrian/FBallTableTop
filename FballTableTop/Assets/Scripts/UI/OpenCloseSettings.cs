@@ -16,7 +16,7 @@ public class OpenCloseSettings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.SetAsLastSibling();
+        
     }
 
 
@@ -26,14 +26,18 @@ public class OpenCloseSettings : MonoBehaviour
 
         if (open == false)
         {
-            LeanTween.rotate(this.gameObject, new Vector3(0, 0, -90), .75f).setEaseOutBack();
+            //LeanTween.rotate(this.gameObject, new Vector3(0, 0, -90), .75f).setEaseOutBack();
+            //LeanTween.moveLocal(this.gameObject, new Vector3(0, 0, 0), .75f).setEaseOutBack();
+            LeanTween.moveLocal(this.gameObject, new Vector3(-500, -500, 0), .75f).setEaseOutBack();
             open = true;
         }
 
         else if(WindowOpen == false)
         {
 
-            LeanTween.rotate(this.gameObject, new Vector3(0, 0, 90), .75f).setEaseInBack();
+            // LeanTween.rotate(this.gameObject, new Vector3(0, 0, 90), .75f).setEaseInBack();
+            //LeanTween.moveLocal(this.gameObject, new Vector3(0, -125, 0), .75f).setEaseInBack();
+            LeanTween.moveLocal(this.gameObject, new Vector3(-500, -600, 0), .75f).setEaseOutBack();
             open = false;
         }
     }

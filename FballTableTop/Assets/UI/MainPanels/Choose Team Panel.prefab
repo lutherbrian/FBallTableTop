@@ -471,6 +471,7 @@ GameObject:
   - component: {fileID: 6450516573216207547}
   - component: {fileID: 6450516573216207549}
   - component: {fileID: 6450516573216207550}
+  - component: {fileID: 4989390568873579869}
   m_Layer: 8
   m_Name: Choose Team Panel
   m_TagString: Untagged
@@ -587,6 +588,18 @@ MonoBehaviour:
   Team11: {fileID: 0}
   Team12: {fileID: 0}
   Team13: {fileID: 0}
+--- !u!114 &4989390568873579869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450516573216207545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6450516573247632443
 GameObject:
   m_ObjectHideFlags: 0

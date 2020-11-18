@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d208d469ca8425780ddd0ef33700f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammo: {fileID: 0}
   contentpanel: {fileID: 3615055335316116329}
   Leaguestrip: {fileID: 3732625928898296559, guid: beb938d21a9cc47f5a961cd9774789c4,
     type: 3}
@@ -411,6 +410,7 @@ GameObject:
   - component: {fileID: 3615055335646334782}
   - component: {fileID: 3615055335646334783}
   - component: {fileID: 3615055335646334780}
+  - component: {fileID: 835649782523495189}
   m_Layer: 8
   m_Name: League Table (1)
   m_TagString: Untagged
@@ -497,6 +497,18 @@ MonoBehaviour:
   PanelToOpen: {fileID: 1066942002925028374, guid: 9332ecc7328b647cab2d2b6bff3cb086,
     type: 3}
   maincanvas: {fileID: 0}
+--- !u!114 &835649782523495189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615055335646334778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3615055335838849540
 GameObject:
   m_ObjectHideFlags: 0

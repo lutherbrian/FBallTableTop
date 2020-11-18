@@ -23,7 +23,7 @@ public class SeetingAnimation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.gameObject.transform.SetAsLastSibling();
+        
     }
 
     public void MoveSettingsPanel()
@@ -33,6 +33,7 @@ public class SeetingAnimation : MonoBehaviour
 
         {
             LeanTween.moveLocal(SettingsPanel, OnScreenPos, .5f).setEaseInOutQuart();
+            this.gameObject.transform.SetAsLastSibling();
             isActive = true;
 
 

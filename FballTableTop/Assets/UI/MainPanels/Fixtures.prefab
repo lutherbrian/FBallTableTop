@@ -381,6 +381,7 @@ GameObject:
   - component: {fileID: 6904195871489572157}
   - component: {fileID: 6904195871489572156}
   - component: {fileID: 6904195871489572099}
+  - component: {fileID: 3908478778861440546}
   m_Layer: 8
   m_Name: Fixtures
   m_TagString: Untagged
@@ -467,6 +468,18 @@ MonoBehaviour:
   PanelToOpen: {fileID: 3981780829916729032, guid: 16ef8e898dfd547009ae90ff628c892b,
     type: 3}
   maincanvas: {fileID: 0}
+--- !u!114 &3908478778861440546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6904195871489572097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6904195871918270399
 GameObject:
   m_ObjectHideFlags: 0

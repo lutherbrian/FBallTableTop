@@ -121,6 +121,7 @@ public class MovePanelScript : MonoBehaviour
        newgameObject.transform.localPosition = OpenPosition;
 
        newgameObject.transform.SetParent(maincanvas.transform, false);
+        
 
 
 

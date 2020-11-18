@@ -5066,6 +5066,7 @@ GameObject:
   - component: {fileID: 6757077784941939720}
   - component: {fileID: 6757077784941939723}
   - component: {fileID: 6757077784941939722}
+  - component: {fileID: 4663796110259218234}
   m_Layer: 8
   m_Name: You Won Screen
   m_TagString: Untagged
@@ -5145,15 +5146,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd98dc0130d9838459fa320b756d25cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EndPositionPOUT: {fileID: 0}
   PanelInDelay: 0
-  panelIn: {fileID: 0}
   StartPosition: {fileID: 0}
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
   PanelToOpen: {fileID: 0}
   maincanvas: {fileID: 0}
+--- !u!114 &4663796110259218234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757077784941939732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6757077784227188167
 PrefabInstance:
   m_ObjectHideFlags: 0
