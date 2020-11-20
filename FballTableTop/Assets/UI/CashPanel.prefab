@@ -82,6 +82,7 @@ GameObject:
   - component: {fileID: 5081316353695639308}
   - component: {fileID: 5081316353695639307}
   - component: {fileID: 5081316353695639306}
+  - component: {fileID: -1189649713810131573}
   - component: {fileID: 5081316353695639309}
   m_Layer: 8
   m_Name: CashPanel
@@ -148,6 +149,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-1189649713810131573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081316353695639311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BackImageNum: 2
+  index: 5
+  changeBackground: 0
 --- !u!114 &5081316353695639309
 MonoBehaviour:
   m_ObjectHideFlags: 0

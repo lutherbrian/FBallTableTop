@@ -6479,6 +6479,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackImageNum: 2
+  index: 1
+  changeBackground: 1
 --- !u!1 &5794356307216968878
 GameObject:
   m_ObjectHideFlags: 0
