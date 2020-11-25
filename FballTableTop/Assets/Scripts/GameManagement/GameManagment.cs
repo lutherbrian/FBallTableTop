@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+[System.Serializable]
 public class GameManagment : MonoBehaviour
 {
 
@@ -13,6 +14,7 @@ public class GameManagment : MonoBehaviour
     public GameObject TeamPrefab;
     public int numberOfPlayers;
     public int numberOfTeams = 9;
+    public int Season = 1;
 
 
     public TMP_InputField Team1;

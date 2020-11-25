@@ -57,12 +57,12 @@ public class AddLeagueTable : MonoBehaviour
 
             
 
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().teamText.text = teaminfo.teams[i].TeamName;
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().played.text = teaminfo.teams[i].played.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().points.text = teaminfo.teams[i].Pts.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsFor.text = teaminfo.teams[i].Gf.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsAgainst.text = teaminfo.teams[i].Ga.ToString();
-            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalDif.text = teaminfo.teams[i].GD.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().teamText.text = teaminfo.teamsList[i].TeamName;
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().played.text = teaminfo.teamsList[i].played.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().points.text = teaminfo.teamsList[i].Pts.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsFor.text = teaminfo.teamsList[i].Gf.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalsAgainst.text = teaminfo.teamsList[i].Ga.ToString();
+            newLeagueStrip.GetComponent<LeaugueSlotsdata>().goalDif.text = teaminfo.teamsList[i].GD.ToString();
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().rank.text = positionNumber.ToString();
             positionNumber++;
 

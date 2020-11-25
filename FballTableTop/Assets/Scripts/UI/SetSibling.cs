@@ -24,7 +24,7 @@ public class SetSibling : MonoBehaviour
     {
         this.gameObject.transform.SetSiblingIndex(index);
         
-        Debug.Log(this.gameObject.name + this.gameObject.transform.GetSiblingIndex().ToString());
+       
     }
 
     public void SetBackground()

@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
+[System.Serializable]
 public class Team : MonoBehaviour
 {
 
-
+    public SaveTeamData data;
+    
 
 
     [SerializeField] public string playerName;
@@ -20,6 +25,13 @@ public class Team : MonoBehaviour
     [SerializeField] public int GD = 0;
     [SerializeField] public bool FormationChanged = false;
     [SerializeField] public int Formation = 3;
+    [SerializeField] public int LeaugeTitles = 0;
+    [SerializeField] public int cupTitles = 0;
+    [SerializeField] public int eCupTitles = 0;
+    [SerializeField] public bool cupTeam = true;
+    [SerializeField] public bool eCupTeam = false;
+
+
 
 
 
@@ -27,11 +39,29 @@ public class Team : MonoBehaviour
     void Start()
     {
         Pts = Random.Range(0, 90);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        data.playerName = playerName;
+        data.TeamName = TeamName;
+        data.played = played;
+        data.playerAtk = playerAtk;
+        data.playerDef = playerDef;
+        data.Pts = Pts;
+        data.Gf = Gf;
+        data.Ga = Ga;
+        data.GD = GD;
+        data.FormationChanged = FormationChanged;
+        data.Formation = Formation;
+        data.LeaugeTitles = LeaugeTitles;
+        data.cupTitles = cupTitles;
+        data.eCupTitles = eCupTitles;
+        data.cupTeam = cupTeam;
+        data.eCupTeam = eCupTeam;
     }
+
+   
 }

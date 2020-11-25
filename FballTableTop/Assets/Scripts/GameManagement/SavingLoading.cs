@@ -1,12 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
+[System.Serializable]
 public class SavingLoading : MonoBehaviour
 {
-    
 
-    public List<Team> teams = new List<Team>();
+
+    [SerializeField] public List<Team> teamsList = new List<Team>();
+    [SerializeField] public List<SaveTeamData> SaveData = new List<SaveTeamData>();
+    public List<SaveTeamData> SaveData2 = new List<SaveTeamData>();
+
+
+
+
+
 
     private int loop = 0;
     // Start is called before the first frame update
@@ -33,23 +43,42 @@ public class SavingLoading : MonoBehaviour
         {
             Team Teamobject = GameObject.Find("Team" + i).GetComponent<Team>();
 
-            teams.Add(Teamobject);
+            teamsList.Add(Teamobject);
             loop++;
-            
+
         }
 
-      
-        
+
+
 
     }
 
-   
+
+    [ContextMenu("Do Something")]
+    public void adddata()
+
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            SaveTeamData data = GameObject.Find("Team" + i).GetComponent<Team>().data;
+
+            SaveData.Add(data);
+            loop++;
+
+        }
+
+
+
+
+    }
+
+
 
     public void StartSort()
 
     {
 
-        teams.Sort(SortList);
+        teamsList.Sort(SortList);
     }
 
     public int SortList(Team a, Team b)
@@ -73,5 +102,58 @@ public class SavingLoading : MonoBehaviour
         return 0;
     }
 
+
+    public void SaveTeams()
+
+    {
+
+        BinaryFormatter binary = new BinaryFormatter();
+        FileStream fStream = File.Create(Application.persistentDataPath + "/TeamData.FBF");
+
+
+
+        binary.Serialize(fStream, SaveData);
+        fStream.Close();
+    }
+
+
+
+    public void LoadFile()
+    {
+        if (File.Exists(Application.persistentDataPath + "/TeamData.FBF"))
+        {
+            using (Stream stream = File.Open(Application.persistentDataPath + "/TeamData.FBF", FileMode.Open))
+            {
+                var bformatter = new BinaryFormatter();
+
+                List<SaveTeamData> items = (List<SaveTeamData>)bformatter.Deserialize(stream);
+
+                SaveData2 = items;
+                //applySaveData();
+            }
+
+        }
+    }
+
+
+    public void applySaveData()
+
+    {
+        for (int i = 0; i < teamsList.Count; i++)
+        {
+            Team nTeam = GameObject.Find("Team" + i).GetComponent<Team>();
+
+            //nTeam = SaveData[i];
+
+
+
+        }
+    }
+
+
    
+
+   
+
+
 }
