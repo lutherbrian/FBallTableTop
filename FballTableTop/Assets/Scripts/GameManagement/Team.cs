@@ -45,6 +45,13 @@ public class Team : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
+    }
+
+    public void AddData()
+
+    {
+
         data.playerName = playerName;
         data.TeamName = TeamName;
         data.played = played;
@@ -61,6 +68,28 @@ public class Team : MonoBehaviour
         data.eCupTitles = eCupTitles;
         data.cupTeam = cupTeam;
         data.eCupTeam = eCupTeam;
+    }
+
+    public void LoadData()
+
+    {
+        playerName = data.playerName;
+        TeamName = data.TeamName;
+        played = data.played;
+        playerAtk = data.playerAtk;
+        playerDef = data.playerDef;
+        Pts = data.Pts;
+        Gf = data.Gf;
+        Ga = data.Ga;
+        GD = data.GD;
+        FormationChanged = data.FormationChanged;
+        Formation = data.Formation;
+        LeaugeTitles = data.LeaugeTitles;
+        cupTitles = data.cupTitles;
+        eCupTitles = data.eCupTitles;
+        cupTeam = data.cupTeam;
+        data.eCupTeam = eCupTeam = data.eCupTeam;
+
     }
 
    

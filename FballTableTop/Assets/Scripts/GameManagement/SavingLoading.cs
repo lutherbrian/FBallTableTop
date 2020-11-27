@@ -10,8 +10,12 @@ public class SavingLoading : MonoBehaviour
 
 
     [SerializeField] public List<Team> teamsList = new List<Team>();
-    [SerializeField] public List<SaveTeamData> SaveData = new List<SaveTeamData>();
-    public List<SaveTeamData> SaveData2 = new List<SaveTeamData>();
+    [SerializeField] public List<SaveTeamData> teamSaveData = new List<SaveTeamData>();
+    
+    [SerializeField] public List<GameManagementData> gMSaveData = new List<GameManagementData>();
+
+    public List<SaveTeamData> teamLoadedData = new List<SaveTeamData>();
+    
 
 
 
@@ -23,6 +27,7 @@ public class SavingLoading : MonoBehaviour
     void Start()
     {
         LeanTween.delayedCall(this.gameObject, 2f, (addTeamsToList));
+        LeanTween.delayedCall(this.gameObject, 2f, (AutoSave));
     }
 
     // Update is called once per frame
@@ -54,20 +59,35 @@ public class SavingLoading : MonoBehaviour
     }
 
 
-    [ContextMenu("Do Something")]
-    public void adddata()
+    [ContextMenu("SaveTest")]
+    public void addSaveData()
 
     {
+        teamSaveData.Clear();
+        gMSaveData.Clear();
         for (int i = 0; i < 9; i++)
         {
-            SaveTeamData data = GameObject.Find("Team" + i).GetComponent<Team>().data;
+            Team Teamobject = GameObject.Find("Team" + i).GetComponent<Team>();
+            Teamobject.AddData();
+            SaveTeamData data = Teamobject.data;
+            teamSaveData.Add(data);
+            
+            
 
-            SaveData.Add(data);
-            loop++;
+            if (i == 8)
+
+            {
+                Debug.Log("saving");
+                this.gameObject.GetComponent<GameManagment>().addData();
+                gMSaveData.Add(this.gameObject.GetComponent<GameManagment>().data);
+                SaveTeams();
+                SaveGMData();
+
+            }
 
         }
 
-
+        
 
 
     }
@@ -107,18 +127,18 @@ public class SavingLoading : MonoBehaviour
 
     {
 
+        
         BinaryFormatter binary = new BinaryFormatter();
         FileStream fStream = File.Create(Application.persistentDataPath + "/TeamData.FBF");
-
-
-
-        binary.Serialize(fStream, SaveData);
+        binary.Serialize(fStream, teamSaveData);
         fStream.Close();
     }
 
+  
 
 
-    public void LoadFile()
+
+    public void LoadTeamFile()
     {
         if (File.Exists(Application.persistentDataPath + "/TeamData.FBF"))
         {
@@ -126,10 +146,44 @@ public class SavingLoading : MonoBehaviour
             {
                 var bformatter = new BinaryFormatter();
 
-                List<SaveTeamData> items = (List<SaveTeamData>)bformatter.Deserialize(stream);
+                teamLoadedData = (List<SaveTeamData>)bformatter.Deserialize(stream);
 
-                SaveData2 = items;
-                //applySaveData();
+                
+                applySaveData();
+            }
+
+        }
+    }
+
+
+    public void SaveGMData()
+
+    {
+        BinaryFormatter binary = new BinaryFormatter();
+        FileStream fStream = File.Create(Application.persistentDataPath + "/GMData.FBF");
+        binary.Serialize(fStream, gMSaveData);
+        fStream.Close();
+
+
+    }
+
+
+
+    public void LoadGMFile()
+    {
+        if (File.Exists(Application.persistentDataPath + "/GMData.FBF"))
+        {
+            using (Stream stream = File.Open(Application.persistentDataPath + "/GMData.FBF", FileMode.Open))
+            {
+                var bformatter = new BinaryFormatter();
+
+                gMSaveData = (List<GameManagementData>)bformatter.Deserialize(stream);
+
+                this.gameObject.GetComponent<GameManagment>().data = gMSaveData[0];
+                this.gameObject.GetComponent<GameManagment>().LoadData();
+                
+
+
             }
 
         }
@@ -139,11 +193,14 @@ public class SavingLoading : MonoBehaviour
     public void applySaveData()
 
     {
-        for (int i = 0; i < teamsList.Count; i++)
+        Debug.Log("Loaded");
+        for (int i = 0; i < teamLoadedData.Count; i++)
         {
             Team nTeam = GameObject.Find("Team" + i).GetComponent<Team>();
 
-            //nTeam = SaveData[i];
+            nTeam.data = teamLoadedData[i];
+            nTeam.LoadData();
+            
 
 
 
@@ -151,7 +208,13 @@ public class SavingLoading : MonoBehaviour
     }
 
 
-   
+   void AutoSave()
+
+    {
+       // addSaveData();
+        //LeanTween.delayedCall(this.gameObject, 2f, (AutoSave));
+
+    }
 
    
 

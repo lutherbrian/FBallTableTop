@@ -13,6 +13,7 @@ public class MovePanelScript : MonoBehaviour
     public float PanelInDelay = 2.5f;
     
     public GameObject StartPosition;
+    public int panelnumber;
     
 
     public bool multipleplayerPanel = false;
@@ -34,11 +35,17 @@ public class MovePanelScript : MonoBehaviour
         
         
         gameManagement = GameObject.FindGameObjectWithTag("GameManager");
+        
+
+        if (gameManagement.GetComponent<GameManagment>().currentPanel != 20)
+
+        {
+            gameManagement.GetComponent<GameManagment>().currentPanel = panelnumber;
+        }
+
+
         panelAnimations = 1;
-
-
-
-       maincanvas = GameObject.FindGameObjectWithTag("MainCanvas");
+        maincanvas = GameObject.FindGameObjectWithTag("MainCanvas");
        OpenPosition = new Vector3(-3000, 0, 0);
 
         if (spawn == true)

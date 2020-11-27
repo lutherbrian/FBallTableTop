@@ -434,6 +434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInDelay: 0
   StartPosition: {fileID: 0}
+  panelnumber: 7
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
