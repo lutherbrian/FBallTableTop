@@ -93,6 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInDelay: 0.8
   StartPosition: {fileID: 0}
+  panelnumber: 20
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
@@ -112,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackImageNum: 2
   index: 4
+  changeBackground: 1
 --- !u!1 &3981780830145228339
 GameObject:
   m_ObjectHideFlags: 0

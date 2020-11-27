@@ -165,7 +165,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 137274221347451296}
+  - {fileID: 3615055336565540873}
   - {fileID: 3615055336826492613}
   - {fileID: 3615055337117250391}
   m_Father: {fileID: 3615055335646334781}
@@ -491,6 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInDelay: 0.8
   StartPosition: {fileID: 0}
+  panelnumber: 20
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
@@ -508,7 +509,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackImageNum: 2
   index: 4
+  changeBackground: 1
 --- !u!1 &3615055335838849540
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,7 +1561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beb938d21a9cc47f5a961cd9774789c4, type: 3}
---- !u!224 &137274221347451296 stripped
+--- !u!224 &3615055336565540873 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3732625928898296558, guid: beb938d21a9cc47f5a961cd9774789c4,
     type: 3}

@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInDelay: 0
   StartPosition: {fileID: 0}
+  panelnumber: 20
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
@@ -255,7 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackImageNum: 2
   index: 4
+  changeBackground: 1
 --- !u!1 &7940174960645534968
 GameObject:
   m_ObjectHideFlags: 0
