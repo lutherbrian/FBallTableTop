@@ -8,6 +8,7 @@ public class GameManagementData
     [SerializeField] public int numberOfPlayers;
     [SerializeField] public int numberOfTeams = 9;
     [SerializeField] public int Season = 1;
+    [SerializeField] public int Week = 1;
     [SerializeField] public int currentPanel = 0;
 
 

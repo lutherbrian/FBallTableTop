@@ -19,6 +19,8 @@ public class MovePanelScript : MonoBehaviour
     public bool multipleplayerPanel = false;
     public bool spawn = true;
     public GameObject gameManagement;
+    public bool saveGame = true;
+    public bool ChangeWeeks = false;
     
     private int panelAnimations;
 
@@ -37,10 +39,12 @@ public class MovePanelScript : MonoBehaviour
         gameManagement = GameObject.FindGameObjectWithTag("GameManager");
         
 
-        if (gameManagement.GetComponent<GameManagment>().currentPanel != 20)
+        if (panelnumber != 20)
 
         {
             gameManagement.GetComponent<GameManagment>().currentPanel = panelnumber;
+
+            Debug.Log(panelnumber);
         }
 
 
@@ -128,8 +132,24 @@ public class MovePanelScript : MonoBehaviour
        newgameObject.transform.localPosition = OpenPosition;
 
        newgameObject.transform.SetParent(maincanvas.transform, false);
+
+        //save the game
+        if (saveGame == true)
+
+        {
+
+            gameManagement.GetComponent<SavingLoading>().addSaveData();
+
+
+        }
         
 
+        if (ChangeWeeks == true)
+
+        {
+
+            gameManagement.GetComponent<GameManagment>().Week++;
+        }
 
 
     }

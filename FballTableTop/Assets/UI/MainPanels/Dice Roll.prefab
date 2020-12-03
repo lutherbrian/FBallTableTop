@@ -659,11 +659,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInDelay: 0.8
   StartPosition: {fileID: 0}
-  panelnumber: 6
+  panelnumber: 5
   multipleplayerPanel: 1
   spawn: 1
   gameManagement: {fileID: 0}
-  PanelToOpen: {fileID: 5706192942009034111, guid: cc8d836db32d24ce3b14840c8c3e14c3,
+  saveGame: 1
+  ChangeWeeks: 1
+  PanelToOpen: {fileID: 6904195871489572097, guid: a1752eb04c4b74f21a301880ec7ab5cd,
     type: 3}
   maincanvas: {fileID: 0}
 --- !u!114 &1007399018697135528
@@ -1245,7 +1247,7 @@ PrefabInstance:
     - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
@@ -1325,6 +1327,31 @@ PrefabInstance:
     - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SaveGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8704255976299369202, guid: d264f55374359874ba396d99e66b6b84,

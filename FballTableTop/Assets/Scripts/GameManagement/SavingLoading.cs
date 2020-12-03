@@ -71,13 +71,13 @@ public class SavingLoading : MonoBehaviour
             Teamobject.AddData();
             SaveTeamData data = Teamobject.data;
             teamSaveData.Add(data);
-            
-            
+
+            Debug.Log("savingTD");
 
             if (i == 8)
 
             {
-                Debug.Log("saving");
+                Debug.Log("savingGM");
                 this.gameObject.GetComponent<GameManagment>().addData();
                 gMSaveData.Add(this.gameObject.GetComponent<GameManagment>().data);
                 SaveTeams();
@@ -181,6 +181,9 @@ public class SavingLoading : MonoBehaviour
 
                 this.gameObject.GetComponent<GameManagment>().data = gMSaveData[0];
                 this.gameObject.GetComponent<GameManagment>().LoadData();
+                this.gameObject.GetComponent<LoadPanel>().panelNumber = gMSaveData[0].currentPanel;
+
+                this.gameObject.GetComponent<LoadPanel>().MoveStartScreen();
                 
 
 
@@ -211,8 +214,8 @@ public class SavingLoading : MonoBehaviour
    void AutoSave()
 
     {
-       // addSaveData();
-        //LeanTween.delayedCall(this.gameObject, 2f, (AutoSave));
+       //addSaveData();
+       //LeanTween.delayedCall(this.gameObject, 2f, (AutoSave));
 
     }
 

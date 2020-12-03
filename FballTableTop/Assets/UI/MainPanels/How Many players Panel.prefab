@@ -1083,9 +1083,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PanelInDelay: 0
   StartPosition: {fileID: 0}
+  panelnumber: 20
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
+  saveGame: 0
   PanelToOpen: {fileID: 6450516573216207545, guid: 35092c24ace004a3da4bd872e65a5106,
     type: 3}
   maincanvas: {fileID: 0}

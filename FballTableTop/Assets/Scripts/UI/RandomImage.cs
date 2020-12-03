@@ -33,7 +33,7 @@ public class RandomImage : MonoBehaviour
         background.CrossFadeColor(new Color(1, 1, 1, 0), time, false, true);
         LeanTween.delayedCall(gameObject, 1.0f, updateimage).setOnCompleteParam(image);
 
-        Debug.Log("fade");
+        
 
     }
 
@@ -42,7 +42,7 @@ public class RandomImage : MonoBehaviour
     {
         int i = (int)obj;
 
-        Debug.Log("fade2");
+        
         //int random = Random.Range(0, 4);
         switch (i)
         {

@@ -15,6 +15,7 @@ public class GameManagment : MonoBehaviour
     [SerializeField] public int numberOfPlayers;
     [SerializeField] public int numberOfTeams = 9;
     [SerializeField] public int Season = 1;
+    [SerializeField] public int Week = 1;
     [SerializeField] public int currentPanel = 0;
 
 
@@ -81,6 +82,7 @@ public class GameManagment : MonoBehaviour
         data.numberOfPlayers = numberOfPlayers;
         data.numberOfPlayers = numberOfTeams;
         data.Season = Season;
+        data.Week = Week;
         data.currentPanel = currentPanel;
 
 
@@ -109,6 +111,7 @@ public class GameManagment : MonoBehaviour
         numberOfPlayers = data.numberOfPlayers;
         numberOfTeams = data.numberOfTeams;
         Season = data.Season;
+        Week = data.Season;
         currentPanel = data.currentPanel;
 
 
@@ -125,7 +128,7 @@ public class GameManagment : MonoBehaviour
         Team11.text = data.Team11;
         Team12.text = data.Team12;
         Team13.text = data.Team13;
-        Debug.Log("man");
+        
 
     }
 
