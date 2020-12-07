@@ -80,7 +80,7 @@ public class GameManagment : MonoBehaviour
 
 
         data.numberOfPlayers = numberOfPlayers;
-        data.numberOfPlayers = numberOfTeams;
+        data.numberOfTeams = numberOfTeams;
         data.Season = Season;
         data.Week = Week;
         data.currentPanel = currentPanel;

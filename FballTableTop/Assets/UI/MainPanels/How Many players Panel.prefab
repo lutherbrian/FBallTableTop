@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 7062007980551647989}
   - component: {fileID: 7062007980551647990}
   - component: {fileID: 7062007980551647991}
+  - component: {fileID: 6752389667574858444}
+  - component: {fileID: 4835458157503673679}
   m_Layer: 8
   m_Name: 4 players button
   m_TagString: Untagged
@@ -207,6 +209,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!114 &6752389667574858444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007980551647993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb773daa7ec84fc3bb1fb6ad28c1870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamsList: []
+  teamSaveData: []
+  gMSaveData: []
+  teamLoadedData: []
+--- !u!114 &4835458157503673679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007980551647993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7062007980561464380
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +255,8 @@ GameObject:
   - component: {fileID: 7062007980561464376}
   - component: {fileID: 7062007980561464377}
   - component: {fileID: 7062007980561464378}
+  - component: {fileID: 6845581641350195733}
+  - component: {fileID: 9083521344755035160}
   m_Layer: 8
   m_Name: 5 players button
   m_TagString: Untagged
@@ -414,6 +449,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!114 &6845581641350195733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007980561464380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb773daa7ec84fc3bb1fb6ad28c1870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamsList: []
+  teamSaveData: []
+  gMSaveData: []
+  teamLoadedData: []
+--- !u!114 &9083521344755035160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007980561464380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7062007981295996909
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +495,8 @@ GameObject:
   - component: {fileID: 7062007981295996905}
   - component: {fileID: 7062007981295996906}
   - component: {fileID: 7062007981295996907}
+  - component: {fileID: 7139083539224108644}
+  - component: {fileID: 6493722858217589405}
   m_Layer: 8
   m_Name: 2 players button
   m_TagString: Untagged
@@ -621,6 +689,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!114 &7139083539224108644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007981295996909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb773daa7ec84fc3bb1fb6ad28c1870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamsList: []
+  teamSaveData: []
+  gMSaveData: []
+  teamLoadedData: []
+--- !u!114 &6493722858217589405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007981295996909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7062007981795911326
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,6 +735,8 @@ GameObject:
   - component: {fileID: 7062007981795911321}
   - component: {fileID: 7062007981795911319}
   - component: {fileID: 7062007981795911320}
+  - component: {fileID: 5380309827747012595}
+  - component: {fileID: 4845845802609216816}
   m_Layer: 8
   m_Name: 6 players button
   m_TagString: Untagged
@@ -828,6 +929,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!114 &5380309827747012595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007981795911326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb773daa7ec84fc3bb1fb6ad28c1870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamsList: []
+  teamSaveData: []
+  gMSaveData: []
+  teamLoadedData: []
+--- !u!114 &4845845802609216816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007981795911326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7062007982112293900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,6 +1220,7 @@ MonoBehaviour:
   spawn: 1
   gameManagement: {fileID: 0}
   saveGame: 0
+  ChangeWeeks: 0
   PanelToOpen: {fileID: 6450516573216207545, guid: 35092c24ace004a3da4bd872e65a5106,
     type: 3}
   maincanvas: {fileID: 0}
@@ -1152,6 +1285,8 @@ GameObject:
   - component: {fileID: 7062007982204786683}
   - component: {fileID: 7062007982204786684}
   - component: {fileID: 7062007982204786685}
+  - component: {fileID: 1983994883155204852}
+  - component: {fileID: 3813650035423858286}
   m_Layer: 8
   m_Name: 3 players button
   m_TagString: Untagged
@@ -1344,6 +1479,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+--- !u!114 &1983994883155204852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007982204786687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edb773daa7ec84fc3bb1fb6ad28c1870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teamsList: []
+  teamSaveData: []
+  gMSaveData: []
+  teamLoadedData: []
+--- !u!114 &3813650035423858286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007982204786687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7062007982221298160
 GameObject:
   m_ObjectHideFlags: 0

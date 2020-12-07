@@ -242,6 +242,8 @@ MonoBehaviour:
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
+  saveGame: 1
+  ChangeWeeks: 0
   PanelToOpen: {fileID: 0}
   maincanvas: {fileID: 0}
 --- !u!114 &303505813006951469
@@ -258,7 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackImageNum: 2
   index: 4
-  changeBackground: 1
+  changeBackground: 0
 --- !u!1 &7940174960645534968
 GameObject:
   m_ObjectHideFlags: 0

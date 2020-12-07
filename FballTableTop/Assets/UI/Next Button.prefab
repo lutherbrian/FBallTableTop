@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 680852441167401848}
   - component: {fileID: 6926601200839438985}
   - component: {fileID: 8306045070626395327}
+  - component: {fileID: 1005845925862740538}
   m_Layer: 8
   m_Name: Next Button
   m_TagString: Untagged
@@ -228,6 +229,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 6b689f393d19d594bb9d60fe694c719e, type: 3}
   Hoversound: {fileID: 8300000, guid: 2ac3dd562cd062d449427b8add70537f, type: 3}
+--- !u!114 &1005845925862740538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299336915064407413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2.57, y: -4.81}
+  m_UseGraphicAlpha: 1
 --- !u!1 &7064862802720475643
 GameObject:
   m_ObjectHideFlags: 0

@@ -72,14 +72,24 @@ public class SpawnLeagueSettings : MonoBehaviour
 
     {
 
+
+        this.gameObject.LeanDelayedCall(.75f, openpanel);
+
+
+    }
+
+    void openpanel()
+    {
+
         GameObject newgameObject = (GameObject)Instantiate(PanelToOpen);
         newgameObject.transform.localPosition = OpenPosition;
 
         newgameObject.transform.SetParent(maincanvas.transform, false);
 
-
-
     }
+
+
+
 
     private void DestroyPanel()
     {
