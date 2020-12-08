@@ -495,6 +495,8 @@ MonoBehaviour:
   multipleplayerPanel: 0
   spawn: 1
   gameManagement: {fileID: 0}
+  saveGame: 1
+  ChangeWeeks: 0
   PanelToOpen: {fileID: 1066942002925028374, guid: 9332ecc7328b647cab2d2b6bff3cb086,
     type: 3}
   maincanvas: {fileID: 0}
@@ -1649,7 +1651,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 8056720281097715176}
+      objectReference: {fileID: 0}
     - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -1793,15 +1795,3 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3615055336868346859}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8056720281097715176 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6765666423557146115, guid: d264f55374359874ba396d99e66b6b84,
-    type: 3}
-  m_PrefabInstance: {fileID: 3615055336868346859}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c020ebbc683422a9775c1481cb0baf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
