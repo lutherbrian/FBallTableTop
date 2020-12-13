@@ -27,8 +27,10 @@ public class Team : MonoBehaviour
     [SerializeField] public int LeaugeTitles = 0;
     [SerializeField] public int cupTitles = 0;
     [SerializeField] public int eCupTitles = 0;
+    [SerializeField] public int cCupTitles = 0;
     [SerializeField] public bool cupTeam = true;
     [SerializeField] public bool eCupTeam = false;
+    [SerializeField] public bool cCupTeam = false;
 
 
 
@@ -65,8 +67,10 @@ public class Team : MonoBehaviour
         data.LeaugeTitles = LeaugeTitles;
         data.cupTitles = cupTitles;
         data.eCupTitles = eCupTitles;
+        data.cCupTitles = cCupTitles;
         data.cupTeam = cupTeam;
         data.eCupTeam = eCupTeam;
+        data.eCupTeam = cCupTeam;
     }
 
     public void LoadData()
@@ -86,8 +90,10 @@ public class Team : MonoBehaviour
         LeaugeTitles = data.LeaugeTitles;
         cupTitles = data.cupTitles;
         eCupTitles = data.eCupTitles;
+        cCupTitles = data.cCupTitles;
         cupTeam = data.cupTeam;
-        data.eCupTeam = eCupTeam = data.eCupTeam;
+        eCupTeam = data.eCupTeam;
+        cCupTeam = data.cCupTeam;
 
     }
 

@@ -1214,16 +1214,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelInDelay: 0
-  StartPosition: {fileID: 0}
   panelnumber: 20
   multipleplayerPanel: 0
   spawn: 1
-  gameManagement: {fileID: 0}
   saveGame: 0
-  ChangeWeeks: 0
+  addweek: 0
+  addcupfixtures: 0
   PanelToOpen: {fileID: 6450516573216207545, guid: 35092c24ace004a3da4bd872e65a5106,
     type: 3}
-  maincanvas: {fileID: 0}
+  fCupFixtures: {fileID: 0}
 --- !u!114 &7062007982170014616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1731,7 +1730,7 @@ PrefabInstance:
     - target: {fileID: 9110376055415192960, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -315
+      value: -280
       objectReference: {fileID: 0}
     - target: {fileID: 9110376055415192960, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OpenSalesPage : MonoBehaviour
 {
+    public string website;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class OpenSalesPage : MonoBehaviour
     public void OpenWebPage()
 
     {
-        Application.OpenURL("https://www.footballfortunes.co.uk/shop/");
+        Application.OpenURL(website);
 
     }
 }

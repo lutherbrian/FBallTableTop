@@ -72,12 +72,12 @@ public class SavingLoading : MonoBehaviour
             SaveTeamData data = Teamobject.data;
             teamSaveData.Add(data);
 
-            Debug.Log("savingTD");
+            
 
             if (i == 8)
 
             {
-                Debug.Log("savingGM");
+                
                 this.gameObject.GetComponent<GameManagment>().addData();
                 gMSaveData.Add(this.gameObject.GetComponent<GameManagment>().data);
                 SaveTeams();
@@ -196,7 +196,7 @@ public class SavingLoading : MonoBehaviour
     public void applySaveData()
 
     {
-        Debug.Log("Loaded");
+        
         for (int i = 0; i < teamLoadedData.Count; i++)
         {
             Team nTeam = GameObject.Find("Team" + i).GetComponent<Team>();

@@ -20,8 +20,10 @@ public class SaveTeamData
     [SerializeField] public int LeaugeTitles;
     [SerializeField] public int cupTitles;
     [SerializeField] public int eCupTitles;
+    [SerializeField] public int cCupTitles;
     [SerializeField] public bool cupTeam;
     [SerializeField] public bool eCupTeam;
+    [SerializeField] public bool cCupTeam;
 
     public SaveTeamData()
 
@@ -42,8 +44,10 @@ public class SaveTeamData
     LeaugeTitles = 0;
     cupTitles = 0;
     eCupTitles = 0;
-    cupTeam = true;
+        cCupTitles = 0;
+        cupTeam = true;
     eCupTeam = false;
+        cCupTeam = false;
 
     }
 

@@ -16,6 +16,11 @@ public class GameManagment : MonoBehaviour
     [SerializeField] public int numberOfTeams = 9;
     [SerializeField] public int Season = 1;
     [SerializeField] public int Week = 1;
+    [SerializeField] public int ffCupRound = 1;
+    [SerializeField] public int eCupRound = 1;
+    [SerializeField] public int uCupRound = 1;
+    [SerializeField] public int cCupRound = 1;
+
     [SerializeField] public int currentPanel = 0;
 
 
@@ -84,6 +89,10 @@ public class GameManagment : MonoBehaviour
         data.Season = Season;
         data.Week = Week;
         data.currentPanel = currentPanel;
+        data.ffCupRound = ffCupRound;
+        data.eCupRound = eCupRound;
+        data.uCupRound = uCupRound;
+        data.cCupRound = cCupRound;
 
 
         data.Team1 = Team1.text;
@@ -113,9 +122,13 @@ public class GameManagment : MonoBehaviour
         Season = data.Season;
         Week = data.Season;
         currentPanel = data.currentPanel;
+        ffCupRound = data.ffCupRound;
+        eCupRound = data.eCupRound;
+        uCupRound = data.uCupRound;
+        cCupRound = data.cCupRound;
 
 
-        Team1.text = data.Team1;
+    Team1.text = data.Team1;
         Team2.text = data.Team2;
         Team3.text = data.Team3;
         Team4.text = data.Team4;
@@ -132,5 +145,21 @@ public class GameManagment : MonoBehaviour
 
     }
 
+    public void addweek()
+
+    {
+        Week++;
+
+        if (Week == 12)
+
+        {
+
+            Season++;
+            Week = 0;
+        }
+
+    }
+
+    
    
 }

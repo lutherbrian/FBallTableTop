@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackImageNum: 2
   index: 4
-  changeBackground: 1
+  changeBackground: 0
 --- !u!114 &898876423536733041
 MonoBehaviour:
   m_ObjectHideFlags: 0

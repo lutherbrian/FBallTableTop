@@ -32,22 +32,32 @@ public class SeetingAnimation : MonoBehaviour
         if (isActive == false)
 
         {
-            LeanTween.moveLocal(SettingsPanel, OnScreenPos, .5f).setEaseInOutQuart();
-            this.gameObject.transform.SetAsLastSibling();
-            isActive = true;
+           
+            LeanTween.delayedCall(this.gameObject, 1f, open);
 
 
         }
 
         else
         {
-
             LeanTween.moveLocal(SettingsPanel, offScreenPos, .5f).setEaseInOutQuart();
             isActive = false;
-        }
-
-
 
         }
 
+
+
+        }
+
+    void open()
+
+    {
+        LeanTween.moveLocal(SettingsPanel, OnScreenPos, .5f).setEaseInOutQuart();
+        this.gameObject.transform.SetAsLastSibling();
+        isActive = true;
+
+    }
+
+
+   
 }

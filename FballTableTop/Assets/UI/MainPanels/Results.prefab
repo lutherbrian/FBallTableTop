@@ -92,14 +92,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelInDelay: 0.8
-  StartPosition: {fileID: 0}
   panelnumber: 3
   multipleplayerPanel: 0
   spawn: 1
-  gameManagement: {fileID: 0}
+  saveGame: 1
+  addweek: 0
+  addcupfixtures: 0
   PanelToOpen: {fileID: 3615055335646334778, guid: e91bef051e1164f64bd10a0a695ba8e1,
     type: 3}
-  maincanvas: {fileID: 0}
+  fCupFixtures: {fileID: 0}
 --- !u!114 &4545202854004851505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,7 +1029,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 7684928038961954895}
+      objectReference: {fileID: 0}
     - target: {fileID: 4669105451670015841, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
@@ -1122,7 +1123,7 @@ PrefabInstance:
     - target: {fileID: 9110376055415192960, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -315
+      value: -280
       objectReference: {fileID: 0}
     - target: {fileID: 9110376055415192960, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
@@ -1172,15 +1173,3 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3981780830277928524}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7684928038961954895 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6765666423557146115, guid: d264f55374359874ba396d99e66b6b84,
-    type: 3}
-  m_PrefabInstance: {fileID: 3981780830277928524}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9c020ebbc683422a9775c1481cb0baf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
