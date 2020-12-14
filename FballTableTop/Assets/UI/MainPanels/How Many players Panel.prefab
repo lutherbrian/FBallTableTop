@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 7062007980551647986}
   - component: {fileID: 7062007980551647987}
   - component: {fileID: 7062007980551647988}
-  - component: {fileID: 7062007980551647989}
   - component: {fileID: 7062007980551647990}
   - component: {fileID: 7062007980551647991}
   - component: {fileID: 6752389667574858444}
   - component: {fileID: 4835458157503673679}
+  - component: {fileID: 3058227133169665818}
   m_Layer: 8
   m_Name: 4 players button
   m_TagString: Untagged
@@ -40,7 +40,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.9999886, y: -160.00003}
+  m_AnchoredPosition: {x: -3, y: -526}
   m_SizeDelta: {x: 20, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7062007980551647986
@@ -97,12 +97,12 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6775098, g: 0.7969019, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.42475083, g: 0.7830189, b: 0.46650064, a: 1}
+    m_SelectedColor: {r: 0.5801887, g: 1, b: 0.6696763, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -133,25 +133,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
---- !u!95 &7062007980551647989
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062007980551647993}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7f71ac11fab25944af4e98a6c967545, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7062007980551647990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,8 +164,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007980551647990}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playHoversound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 3058227133169665818}
+          m_MethodName: Hover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -198,8 +190,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007980551647990}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3058227133169665818}
+          m_MethodName: UnHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -240,6 +247,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &3058227133169665818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007980551647993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 9, y: 9, z: 9}
+  smallSize: {x: 7, y: 7, z: 7}
 --- !u!1 &7062007980561464380
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,11 +273,11 @@ GameObject:
   - component: {fileID: 7062007980561464373}
   - component: {fileID: 7062007980561464374}
   - component: {fileID: 7062007980561464375}
-  - component: {fileID: 7062007980561464376}
   - component: {fileID: 7062007980561464377}
   - component: {fileID: 7062007980561464378}
   - component: {fileID: 6845581641350195733}
   - component: {fileID: 9083521344755035160}
+  - component: {fileID: 4341637841082783225}
   m_Layer: 8
   m_Name: 5 players button
   m_TagString: Untagged
@@ -280,7 +301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 172.00002, y: -160.00003}
+  m_AnchoredPosition: {x: 172.00002, y: -526}
   m_SizeDelta: {x: 20, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7062007980561464373
@@ -337,12 +358,12 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6775098, g: 0.7969019, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.42475083, g: 0.7830189, b: 0.46650064, a: 1}
+    m_SelectedColor: {r: 0.5801887, g: 1, b: 0.6696763, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -373,25 +394,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
---- !u!95 &7062007980561464376
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062007980561464380}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7f71ac11fab25944af4e98a6c967545, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7062007980561464377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,8 +425,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007980561464377}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playHoversound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 4341637841082783225}
+          m_MethodName: Hover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -438,8 +451,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007980561464377}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4341637841082783225}
+          m_MethodName: UnHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -480,6 +508,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &4341637841082783225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007980561464380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 9, y: 9, z: 9}
+  smallSize: {x: 7, y: 7, z: 7}
 --- !u!1 &7062007981295996909
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,11 +534,11 @@ GameObject:
   - component: {fileID: 7062007981295996902}
   - component: {fileID: 7062007981295996903}
   - component: {fileID: 7062007981295996904}
-  - component: {fileID: 7062007981295996905}
   - component: {fileID: 7062007981295996906}
   - component: {fileID: 7062007981295996907}
   - component: {fileID: 7139083539224108644}
   - component: {fileID: 6493722858217589405}
+  - component: {fileID: 1985199924111305442}
   m_Layer: 8
   m_Name: 2 players button
   m_TagString: Untagged
@@ -520,7 +562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -353, y: -160}
+  m_AnchoredPosition: {x: -353, y: -526}
   m_SizeDelta: {x: 20, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7062007981295996902
@@ -577,12 +619,12 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6775098, g: 0.7969019, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.42475083, g: 0.7830189, b: 0.46650064, a: 1}
+    m_SelectedColor: {r: 0.5801887, g: 1, b: 0.6696763, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -613,25 +655,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
---- !u!95 &7062007981295996905
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062007981295996909}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7f71ac11fab25944af4e98a6c967545, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7062007981295996906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,12 +697,38 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 1
+        - m_Target: {fileID: 1985199924111305442}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
   - eventID: 9
     callback:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1985199924111305442}
+          m_MethodName: UnHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -720,6 +769,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1985199924111305442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007981295996909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 9, y: 9, z: 9}
+  smallSize: {x: 7, y: 7, z: 7}
 --- !u!1 &7062007981795911326
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,11 +795,11 @@ GameObject:
   - component: {fileID: 7062007981795911322}
   - component: {fileID: 7062007981795911323}
   - component: {fileID: 7062007981795911324}
-  - component: {fileID: 7062007981795911321}
   - component: {fileID: 7062007981795911319}
   - component: {fileID: 7062007981795911320}
   - component: {fileID: 5380309827747012595}
   - component: {fileID: 4845845802609216816}
+  - component: {fileID: 1964329847076938366}
   m_Layer: 8
   m_Name: 6 players button
   m_TagString: Untagged
@@ -760,7 +823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 347, y: -160.00002}
+  m_AnchoredPosition: {x: 347, y: -526}
   m_SizeDelta: {x: 20, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7062007981795911322
@@ -817,12 +880,12 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6775098, g: 0.7969019, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.42475083, g: 0.7830189, b: 0.46650064, a: 1}
+    m_SelectedColor: {r: 0.5801887, g: 1, b: 0.6696763, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -853,25 +916,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
---- !u!95 &7062007981795911321
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062007981795911326}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7f71ac11fab25944af4e98a6c967545, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7062007981795911319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,8 +947,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007981795911319}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playHoversound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 1964329847076938366}
+          m_MethodName: Hover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -918,8 +973,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007981795911319}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1964329847076938366}
+          m_MethodName: UnHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -960,6 +1030,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &1964329847076938366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007981795911326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 9, y: 9, z: 9}
+  smallSize: {x: 7, y: 7, z: 7}
 --- !u!1 &7062007982112293900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1215,7 @@ GameObject:
   - component: {fileID: 7062007982170014616}
   - component: {fileID: 7889372730768902830}
   - component: {fileID: 1425465394735316191}
+  - component: {fileID: 2882705830954157586}
   m_Layer: 8
   m_Name: How Many players Panel
   m_TagString: Untagged
@@ -1269,6 +1354,24 @@ MonoBehaviour:
   BackImageNum: 2
   index: 1
   changeBackground: 1
+--- !u!114 &2882705830954157586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007982170014621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 965ad8e8ef88842a493ddbd2cb61b000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  First: {fileID: 7062007981295996909}
+  Second: {fileID: 7062007982204786687}
+  Third: {fileID: 7062007980551647993}
+  Fourth: {fileID: 7062007980561464380}
+  Fith: {fileID: 7062007981795911326}
+  speed: 0.1
 --- !u!1 &7062007982204786687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,11 +1384,11 @@ GameObject:
   - component: {fileID: 7062007982204786680}
   - component: {fileID: 7062007982204786681}
   - component: {fileID: 7062007982204786682}
-  - component: {fileID: 7062007982204786683}
   - component: {fileID: 7062007982204786684}
   - component: {fileID: 7062007982204786685}
   - component: {fileID: 1983994883155204852}
   - component: {fileID: 3813650035423858286}
+  - component: {fileID: 3374685659981350865}
   m_Layer: 8
   m_Name: 3 players button
   m_TagString: Untagged
@@ -1309,7 +1412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -177.99998, y: -160.00003}
+  m_AnchoredPosition: {x: -177.99998, y: -526}
   m_SizeDelta: {x: 20, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7062007982204786680
@@ -1366,12 +1469,12 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 3
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6775098, g: 0.7969019, b: 0.8207547, a: 1}
+    m_PressedColor: {r: 0.42475083, g: 0.7830189, b: 0.46650064, a: 1}
+    m_SelectedColor: {r: 0.5801887, g: 1, b: 0.6696763, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1402,25 +1505,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
---- !u!95 &7062007982204786683
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7062007982204786687}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d7f71ac11fab25944af4e98a6c967545, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7062007982204786684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,8 +1536,19 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007982204786684}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playHoversound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 3374685659981350865}
+          m_MethodName: Hover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1467,8 +1562,23 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7062007982204786684}
+        - m_Target: {fileID: 7062007981295996906}
           m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3374685659981350865}
+          m_MethodName: UnHover
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1509,6 +1619,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
+--- !u!114 &3374685659981350865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062007982204786687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 9, y: 9, z: 9}
+  smallSize: {x: 7, y: 7, z: 7}
 --- !u!1 &7062007982221298160
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,9 @@ public class ButtonTransistions : MonoBehaviour
 {
 
   
-    private float speed = .5f;
+    private float speed = .2f;
+    public Vector3 bigSize;
+    public Vector3 smallSize;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,13 @@ public class ButtonTransistions : MonoBehaviour
 
     public void Hover()
     {
-        LeanTween.scaleX(this.gameObject, 1.2f, speed);
+        this.gameObject.LeanScale(bigSize, speed);
+
+    }
+
+    public void UnHover()
+    {
+        this.gameObject.LeanScale(smallSize, speed);
 
     }
 }

@@ -39,6 +39,7 @@ public class Team : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerName = "CPU";
         Pts = Random.Range(0, 90);
         
     }

@@ -16,6 +16,7 @@ public class LeaugueSlotsdata : MonoBehaviour
     public TextMeshProUGUI goalDif;
     public TextMeshProUGUI points;
     public TextMeshProUGUI rank;
+    public GameObject Icon;
 
 
 

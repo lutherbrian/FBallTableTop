@@ -57,7 +57,11 @@ public class MovePanelScript : MonoBehaviour
         }
 
         if (addweek == true)
+        {
             gameManagement.addweek();
+            Debug.Log("week added");
+        }
+        
     }
 
    

@@ -165,7 +165,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 137274221347451296}
+  - {fileID: 3615055336565541108}
   - {fileID: 3615055336826492613}
   - {fileID: 3615055337117250391}
   m_Father: {fileID: 3615055335646334781}
@@ -490,16 +490,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PanelInDelay: 0.8
-  StartPosition: {fileID: 0}
   panelnumber: 4
   multipleplayerPanel: 0
   spawn: 1
-  gameManagement: {fileID: 0}
   saveGame: 1
-  ChangeWeeks: 0
+  addweek: 0
+  addcupfixtures: 0
   PanelToOpen: {fileID: 1066942002925028374, guid: 9332ecc7328b647cab2d2b6bff3cb086,
     type: 3}
-  maincanvas: {fileID: 0}
+  fCupFixtures: {fileID: 0}
 --- !u!114 &835649782523495189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,6 +1316,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4616254292061815667, guid: beb938d21a9cc47f5a961cd9774789c4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5618008301364670805, guid: beb938d21a9cc47f5a961cd9774789c4,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1564,7 +1568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: beb938d21a9cc47f5a961cd9774789c4, type: 3}
---- !u!224 &137274221347451296 stripped
+--- !u!224 &3615055336565541108 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3732625928898296558, guid: beb938d21a9cc47f5a961cd9774789c4,
     type: 3}

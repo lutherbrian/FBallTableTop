@@ -66,6 +66,12 @@ public class AddLeagueTable : MonoBehaviour
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().rank.text = positionNumber.ToString();
             positionNumber++;
 
+            if (teaminfo.teamsList[i].playerName.Contains("Computer"))
+            {
+
+                newLeagueStrip.GetComponent<LeaugueSlotsdata>().Icon.SetActive(false);
+            }
+
            
 
 

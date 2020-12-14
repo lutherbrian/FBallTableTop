@@ -24,8 +24,7 @@ public class OpenCloseSettings : MonoBehaviour
 
     private void Start()
     {
-        SeasonNumber.text = gameManagment.GetComponent<GameManagment>().Season.ToString();
-        WeekNumber.text = gameManagment.GetComponent<GameManagment>().Week.ToString();
+        
         this.gameObject.transform.localScale = new Vector3(0, 0, 0);
         First.transform.localScale = new Vector3(0, 0, 0);
         Second.transform.localScale = new Vector3(0, 0, 0);
@@ -42,7 +41,9 @@ public class OpenCloseSettings : MonoBehaviour
 
             this.gameObject.LeanScale(new Vector3 (2,2,2), .5f).setEaseOutBack();
             this.gameObject.LeanDelayedCall(.3f, ShowFirst);
-            
+            SeasonNumber.text = gameManagment.GetComponent<GameManagment>().Season.ToString();
+            WeekNumber.text = gameManagment.GetComponent<GameManagment>().Week.ToString();
+
         }
 
         else
