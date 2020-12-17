@@ -10,6 +10,7 @@ public class LoadPanel : MonoBehaviour
     public GameObject dice;
     public GameObject league;
     public GameObject fixtures;
+    public GameObject cupFixtures;
     public GameObject Transfer;
     
     private GameObject mainCanvas;
@@ -41,7 +42,8 @@ public class LoadPanel : MonoBehaviour
 
         switch (panelNumber)
         {
-
+            case 8:
+                return cupFixtures;
             case 7:
                 return formation;
             case 6:

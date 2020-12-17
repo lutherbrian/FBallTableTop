@@ -2548,7 +2548,7 @@ PrefabInstance:
     - target: {fileID: 9110376055415192960, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 67.59985
+      value: 67.59961
       objectReference: {fileID: 0}
     - target: {fileID: 9110376055415192960, guid: d264f55374359874ba396d99e66b6b84,
         type: 3}
@@ -3727,6 +3727,8 @@ GameObject:
   - component: {fileID: 455026751}
   - component: {fileID: 455026750}
   - component: {fileID: 455026753}
+  - component: {fileID: 455026755}
+  - component: {fileID: 455026754}
   m_Layer: 8
   m_Name: Settings
   m_TagString: Untagged
@@ -3870,6 +3872,89 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3.23, y: -2.63}
   m_UseGraphicAlpha: 1
+--- !u!114 &455026754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455026748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 455026755}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 0}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 455026755}
+          m_MethodName: UnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+--- !u!114 &455026755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455026748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 1.3, y: 1.3, z: 1.3}
+  smallSize: {x: 1, y: 1, z: 1}
 --- !u!1 &458965029
 GameObject:
   m_ObjectHideFlags: 0
@@ -5124,7 +5209,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1975484488}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.9999999
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6099,6 +6184,8 @@ GameObject:
   - component: {fileID: 778846250}
   - component: {fileID: 778846249}
   - component: {fileID: 778846253}
+  - component: {fileID: 778846255}
+  - component: {fileID: 778846254}
   m_Layer: 8
   m_Name: PResults
   m_TagString: Untagged
@@ -6256,6 +6343,89 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3.23, y: -2.63}
   m_UseGraphicAlpha: 1
+--- !u!114 &778846254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778846247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 778846255}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 0}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 778846255}
+          m_MethodName: UnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+--- !u!114 &778846255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778846247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 1.3, y: 1.3, z: 1.3}
+  smallSize: {x: 1, y: 1, z: 1}
 --- !u!1 &790588915
 GameObject:
   m_ObjectHideFlags: 0
@@ -6637,6 +6807,8 @@ GameObject:
   - component: {fileID: 838184736}
   - component: {fileID: 838184735}
   - component: {fileID: 838184739}
+  - component: {fileID: 838184741}
+  - component: {fileID: 838184740}
   m_Layer: 8
   m_Name: PRatings
   m_TagString: Untagged
@@ -6794,6 +6966,89 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3.23, y: -2.63}
   m_UseGraphicAlpha: 1
+--- !u!114 &838184740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838184733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 838184741}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 0}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 838184741}
+          m_MethodName: UnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+--- !u!114 &838184741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838184733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 1.3, y: 1.3, z: 1.3}
+  smallSize: {x: 1, y: 1, z: 1}
 --- !u!1001 &841620666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7883,7 +8138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.3000488, y: -1216.7002}
+  m_AnchoredPosition: {x: -1.2998047, y: -1216.7}
   m_SizeDelta: {x: 69, y: 30.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943354481
@@ -12977,6 +13232,8 @@ GameObject:
   - component: {fileID: 1834841547}
   - component: {fileID: 1834841546}
   - component: {fileID: 1834841550}
+  - component: {fileID: 1834841552}
+  - component: {fileID: 1834841551}
   m_Layer: 8
   m_Name: Table
   m_TagString: Untagged
@@ -13134,6 +13391,89 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3.23, y: -2.63}
   m_UseGraphicAlpha: 1
+--- !u!114 &1834841551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834841544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1834841552}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+        - m_Target: {fileID: 0}
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_MethodName: playClicksound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1834841552}
+          m_MethodName: UnHover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
+--- !u!114 &1834841552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834841544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34682ced36f8ee64cad2c43038d41d38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigSize: {x: 1.3, y: 1.3, z: 1.3}
+  smallSize: {x: 1, y: 1, z: 1}
 --- !u!1 &1859009369
 GameObject:
   m_ObjectHideFlags: 0
@@ -13997,6 +14337,8 @@ MonoBehaviour:
   dice: {fileID: 1066942002925028374, guid: 9332ecc7328b647cab2d2b6bff3cb086, type: 3}
   league: {fileID: 3615055335646334778, guid: e91bef051e1164f64bd10a0a695ba8e1, type: 3}
   fixtures: {fileID: 6904195871489572097, guid: a1752eb04c4b74f21a301880ec7ab5cd,
+    type: 3}
+  cupFixtures: {fileID: 6904195871489572097, guid: 236181bc8cd83430e91f39515fbbbeb7,
     type: 3}
   Transfer: {fileID: 6696384757768351262, guid: 7aee8093036fa4ce5b6aede8cd457c61,
     type: 3}
@@ -16475,17 +16817,17 @@ PrefabInstance:
     - target: {fileID: 2327686526939406774, guid: 8f57f4f55b5852049ba61c6316086f1e,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.16470587
       objectReference: {fileID: 0}
     - target: {fileID: 2327686526939406774, guid: 8f57f4f55b5852049ba61c6316086f1e,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.16509432
+      value: 0.6166019
       objectReference: {fileID: 0}
     - target: {fileID: 2327686526939406774, guid: 8f57f4f55b5852049ba61c6316086f1e,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.5875658
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3150241931321951599, guid: 8f57f4f55b5852049ba61c6316086f1e,
         type: 3}

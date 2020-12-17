@@ -16,10 +16,16 @@ public class MovePanelScript : MonoBehaviour
     public bool spawn = true;
     public bool saveGame = true;
     public bool addweek = false;
-    public bool addcupfixtures = false;
+    public bool showCupTransfers = false;
+    public bool ShowTransfers = false;
     private int panelAnimations;
     public GameObject PanelToOpen;
-    public GameObject fCupFixtures;
+    public GameObject cupPanel;
+    public GameObject transfersPanel;
+    public GameObject CcupPanel;
+    public GameObject EcupPanel;
+    public GameObject UcupPanel;
+    public GameObject youWonPanel;
     private GameObject maincanvas;
     private Vector3 OpenPosition;
     private GameManagment gameManagement;
@@ -97,7 +103,7 @@ public class MovePanelScript : MonoBehaviour
             else
             {
                 
-                CreatePanel();
+                LeanTween.delayedCall(this.gameObject, 1f, CreatePanel);
                 LeanTween.delayedCall(this.gameObject, 2f, DestroyPanel);
             }
             
@@ -144,17 +150,67 @@ public class MovePanelScript : MonoBehaviour
     {
 
 
-        if (addcupfixtures == true)
+        if (showCupTransfers == true)
 
         {
-            if (gameManagement.Week == 2 || gameManagement.Week == 3)
+            if (gameManagement.Week == 1 || gameManagement.Week == 6)
             {
-                GameObject newgameObject = (GameObject)Instantiate(fCupFixtures);
-                newgameObject.transform.localPosition = OpenPosition;
-                newgameObject.transform.SetParent(maincanvas.transform, false);
+                GameObject cupGameObject = (GameObject)Instantiate(cupPanel);
+                cupGameObject.transform.localPosition = OpenPosition;
+                cupGameObject.transform.SetParent(maincanvas.transform, false);
             }
 
+            else if (gameManagement.Week == 3 || gameManagement.Week == 7)
+
+            {
+                GameObject fixGameObject = (GameObject)Instantiate(transfersPanel);
+                fixGameObject.transform.localPosition = OpenPosition;
+                fixGameObject.transform.SetParent(maincanvas.transform, false);
+
+            }
+
+            else if (gameManagement.Week == 4 || gameManagement.Week == 8)
+
+            {
+                GameObject fixGameObject = (GameObject)Instantiate(CcupPanel);
+                fixGameObject.transform.localPosition = OpenPosition;
+                fixGameObject.transform.SetParent(maincanvas.transform, false);
+
+            }
+
+
+            else if (gameManagement.Week == 5 || gameManagement.Week == 9)
+
+            {
+                GameObject fixGameObject = (GameObject)Instantiate(EcupPanel);
+                fixGameObject.transform.localPosition = OpenPosition;
+                fixGameObject.transform.SetParent(maincanvas.transform, false);
+
+            }
+
+            else if (gameManagement.Week == 6 || gameManagement.Week == 10)
+
+            {
+                GameObject fixGameObject = (GameObject)Instantiate(UcupPanel);
+                fixGameObject.transform.localPosition = OpenPosition;
+                fixGameObject.transform.SetParent(maincanvas.transform, false);
+
+            }
+
+            else if (gameManagement.Week == 2 || gameManagement.Week == 10)
+
+            {
+                GameObject fixGameObject = (GameObject)Instantiate(youWonPanel);
+                fixGameObject.transform.localPosition = OpenPosition;
+                fixGameObject.transform.SetParent(maincanvas.transform, false);
+
+            }
+
+
+
         }
+
+       
 
 
        

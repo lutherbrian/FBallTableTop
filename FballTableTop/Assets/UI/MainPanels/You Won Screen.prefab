@@ -5152,9 +5152,16 @@ MonoBehaviour:
   spawn: 1
   saveGame: 1
   addweek: 0
-  addcupfixtures: 0
-  PanelToOpen: {fileID: 0}
-  fCupFixtures: {fileID: 0}
+  showCupTransfers: 0
+  ShowTransfers: 0
+  PanelToOpen: {fileID: 6904195871489572097, guid: a1752eb04c4b74f21a301880ec7ab5cd,
+    type: 3}
+  cupPanel: {fileID: 0}
+  transfersPanel: {fileID: 0}
+  CcupPanel: {fileID: 0}
+  EcupPanel: {fileID: 0}
+  UcupPanel: {fileID: 0}
+  youWonPanel: {fileID: 0}
 --- !u!114 &4663796110259218234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5167,7 +5174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12978be3b3cf24bc3baf970a25a08a4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BackImageNum: 2
+  BackImageNum: 1
   index: 1
   changeBackground: 1
 --- !u!1001 &6757077784227188167
