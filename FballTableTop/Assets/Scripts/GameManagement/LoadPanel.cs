@@ -39,7 +39,7 @@ public class LoadPanel : MonoBehaviour
     public GameObject selectLoadedPanel()
 
     {
-
+        //loads in a certain panel based on the saved game data
         switch (panelNumber)
         {
             case 8:
@@ -71,7 +71,7 @@ public class LoadPanel : MonoBehaviour
 
 
 
-
+    //moves the panel into the screen
     void MoveLoadedPanelIn()
 
     {

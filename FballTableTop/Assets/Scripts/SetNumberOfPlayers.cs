@@ -12,11 +12,7 @@ public class SetNumberOfPlayers : MonoBehaviour
         Gamemanager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManagment>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
     public void NumberOfPlayers(int number)
 

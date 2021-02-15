@@ -11,18 +11,12 @@ public class SavingLoading : MonoBehaviour
 
     [SerializeField] public List<Team> teamsList = new List<Team>();
     [SerializeField] public List<SaveTeamData> teamSaveData = new List<SaveTeamData>();
-    
     [SerializeField] public List<GameManagementData> gMSaveData = new List<GameManagementData>();
-
     public List<SaveTeamData> teamLoadedData = new List<SaveTeamData>();
-    
-
-
-
-
-
-
     private int loop = 0;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +26,7 @@ public class SavingLoading : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {// debug to sort table
         if (Input.GetKeyDown(KeyCode.Space))
 
         {
@@ -92,8 +86,6 @@ public class SavingLoading : MonoBehaviour
 
     }
 
-
-
     public void StartSort()
 
     {
@@ -122,7 +114,7 @@ public class SavingLoading : MonoBehaviour
         return 0;
     }
 
-
+    // saves team data
     public void SaveTeams()
 
     {
@@ -137,7 +129,7 @@ public class SavingLoading : MonoBehaviour
   
 
 
-
+    //loads team data
     public void LoadTeamFile()
     {
         if (File.Exists(Application.persistentDataPath + "/TeamData.FBF"))
@@ -155,7 +147,7 @@ public class SavingLoading : MonoBehaviour
         }
     }
 
-
+    //Saves Gamemanagement data
     public void SaveGMData()
 
     {
@@ -168,7 +160,7 @@ public class SavingLoading : MonoBehaviour
     }
 
 
-
+    //loads and applies gamemanagement data
     public void LoadGMFile()
     {
         if (File.Exists(Application.persistentDataPath + "/GMData.FBF"))
@@ -192,7 +184,7 @@ public class SavingLoading : MonoBehaviour
         }
     }
 
-
+    //applies team save data
     public void applySaveData()
 
     {

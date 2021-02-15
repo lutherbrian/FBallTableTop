@@ -35,7 +35,7 @@ public class ChangeFixtureTitle : MonoBehaviour
 
     }
 
-
+    // changes the title of the panel based on what fixture is being played
     public void ChangeTitle()
     {
         if (league == false)

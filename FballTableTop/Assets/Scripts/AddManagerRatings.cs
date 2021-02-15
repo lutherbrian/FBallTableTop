@@ -36,7 +36,7 @@ public class AddManagerRatings : MonoBehaviour
         
 
        
-
+        //adds League slots depending on the number of players in the gamemanagemnt script
         for (int i = 0; i < gamemanager.GetComponent<GameManagment>().numberOfPlayers; i++)
         {
 

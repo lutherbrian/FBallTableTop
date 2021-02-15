@@ -16,8 +16,9 @@ public class AddLeagueTable : MonoBehaviour
     private int positionNumber = 1;
 
     private GameObject newLeagueStrip;
-
     float pitch = 1;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,7 @@ public class AddLeagueTable : MonoBehaviour
         StartCoroutine(addleaugue());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 
    IEnumerator addleaugue()
     {
@@ -50,13 +47,6 @@ public class AddLeagueTable : MonoBehaviour
             
             newLeagueStrip = (GameObject)Instantiate(Leaguestrip);
             newLeagueStrip.transform.SetParent(contentpanel.transform, false);
-
-            
-
-          
-
-            
-
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().teamText.text = teaminfo.teamsList[i].TeamName;
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().played.text = teaminfo.teamsList[i].played.ToString();
             newLeagueStrip.GetComponent<LeaugueSlotsdata>().points.text = teaminfo.teamsList[i].Pts.ToString();

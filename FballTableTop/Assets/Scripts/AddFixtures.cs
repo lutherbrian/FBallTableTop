@@ -20,12 +20,8 @@ public class AddFixtures : MonoBehaviour
         StartCoroutine(addFixtureSlot());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+  
+    //adds fixture slots, number is based on the slot number
     IEnumerator addFixtureSlot()
     {
 
@@ -39,14 +35,7 @@ public class AddFixtures : MonoBehaviour
 
             newFixtureStrip = (GameObject)Instantiate(Fixturestrip);
             newFixtureStrip.transform.SetParent(contentpanel.transform, false);
-          
-
-
-
-
-
-
-
+     
 
         }
 

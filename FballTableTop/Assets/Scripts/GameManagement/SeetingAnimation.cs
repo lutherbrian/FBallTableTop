@@ -20,11 +20,7 @@ public class SeetingAnimation : MonoBehaviour
         offScreenPos = new Vector3(0, -800, 0);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     public void MoveSettingsPanel()
         {

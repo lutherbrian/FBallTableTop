@@ -49,11 +49,7 @@ public class GameManagment : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 
     public void PlayerNumber(int x)
 
@@ -63,7 +59,7 @@ public class GameManagment : MonoBehaviour
         
       
     }
-
+    //ADD TEAMS BASED ON NUMBER OF PLAYERS
     public void AddTeams()
 
     {
@@ -77,7 +73,7 @@ public class GameManagment : MonoBehaviour
         }
 
     }
-
+    //ADD DATA FROM GAMEMANAGEMENT DATA
     public void addData()
 
     {
@@ -110,7 +106,7 @@ public class GameManagment : MonoBehaviour
         data.Team13 = Team13.text;
 
     }
-
+    //LOAD DATA FROM SAVE FILE
     public void LoadData()
 
     {
@@ -144,7 +140,7 @@ public class GameManagment : MonoBehaviour
         
 
     }
-
+    //ADD WEEKS TO COUNTER
     public void addweek()
 
     {

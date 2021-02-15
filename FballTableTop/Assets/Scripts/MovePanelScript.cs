@@ -36,7 +36,7 @@ public class MovePanelScript : MonoBehaviour
     void Start()
     {
         
-        
+        //Find the GameManager Object and get the GameManagement Script
         gameManagementObj = GameObject.FindGameObjectWithTag("GameManager");
         gameManagement = gameManagementObj.GetComponent<GameManagment>();
 
@@ -52,7 +52,9 @@ public class MovePanelScript : MonoBehaviour
 
 
         panelAnimations = 1;
+        //Find the Main Canvas so we can set that as the Parent when introducing new Panels
         maincanvas = GameObject.FindGameObjectWithTag("MainCanvas");
+        //Set Open position so it is off Screen
         OpenPosition = new Vector3(-3000, 0, 0);
 
         //set for the startscreen so it doesnt slide in intially
@@ -61,11 +63,11 @@ public class MovePanelScript : MonoBehaviour
             
             LeanTween.moveLocal(this.gameObject, new Vector3(0, 0, 0), speed).setEaseInOutBack();
         }
-
+        // If the panel that this script is attached to has addweek set to true then get the gamemanagment script and add a week to the counter
         if (addweek == true)
         {
             gameManagement.addweek();
-            Debug.Log("week added");
+            
         }
         
     }
@@ -102,7 +104,7 @@ public class MovePanelScript : MonoBehaviour
 
             else
             {
-                
+                //Creates and destroys a panel using delays so they happen off screen 
                 LeanTween.delayedCall(this.gameObject, 1f, CreatePanel);
                 LeanTween.delayedCall(this.gameObject, 2f, DestroyPanel);
             }
@@ -149,7 +151,7 @@ public class MovePanelScript : MonoBehaviour
 
     {
 
-
+        //Show a particular panel based on what week it is
         if (showCupTransfers == true)
 
         {

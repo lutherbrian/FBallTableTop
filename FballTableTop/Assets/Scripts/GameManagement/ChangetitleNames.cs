@@ -23,13 +23,9 @@ public class ChangetitleNames : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+  
 
-    }
-
-
+    //changes the title names
     public void ChangeTitle()
     {
 

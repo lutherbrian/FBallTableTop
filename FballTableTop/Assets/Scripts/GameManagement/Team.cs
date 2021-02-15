@@ -44,12 +44,8 @@ public class Team : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
+  
+    //add data to local variables
     public void AddData()
 
     {
@@ -74,6 +70,7 @@ public class Team : MonoBehaviour
         data.eCupTeam = cCupTeam;
     }
 
+    //Load data from save file
     public void LoadData()
 
     {

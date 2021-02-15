@@ -27,11 +27,7 @@ public class NumberofPlayersSelect : MonoBehaviour
         player5.onClick.AddListener(() => playerselected(5));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+  
 
 
     public void SetGameManagmentPlayerNumbers()
@@ -42,7 +38,10 @@ public class NumberofPlayersSelect : MonoBehaviour
 
         }
 
+
+
     public void playerselected(int numberPl)
+
     {
         numberOfPlayersSelected = numberPl;
 
